@@ -32,8 +32,7 @@ Time DATETIME NOT NULL,
 
 PRIMARY KEY(CustID, SongID, Version),
 FOREIGN KEY(CustID) REFERENCES Customers(CustID),
-FOREIGN KEY(SongID) REFERENCES Song(SongID),
-FOREIGN KEY(Version) REFERENCES Song(Version)
+FOREIGN KEY (SongID, Version) REFERENCES Song(SongID, Version)
 );
 
 
@@ -47,8 +46,7 @@ Money DECIMAL(6,2) NOT NULL,
 
 PRIMARY KEY(CustID, SongID, Version),
 FOREIGN KEY(CustID) REFERENCES Customers(CustID),
-FOREIGN KEY(SongID) REFERENCES Song(SongID),
-FOREIGN KEY(Version) REFERENCES Song(Version)
+FOREIGN KEY (SongID, Version) REFERENCES Song(SongID, Version)
 );
 
 
@@ -61,6 +59,5 @@ Role VARCHAR(20),
 
 PRIMARY KEY(ContribID, SongID, Version),
 FOREIGN KEY(ContribID) REFERENCES Contributor(ContribID),
-FOREIGN KEY(SongID) REFERENCES Song(SongID),
-FOREIGN KEY(Version) REFERENCES Song(Version)
+FOREIGN KEY (SongID, Version) REFERENCES Song(SongID, Version)
 );
