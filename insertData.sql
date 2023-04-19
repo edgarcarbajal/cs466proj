@@ -76,3 +76,31 @@ VALUES
     ('My Heart Will Go On', 'Pop', '0022', 1997, 'Single', '00:04:41'),
     ('Born to Run', 'Rock', '0023', 1975, 'Duet', '00:04:30');
 
+INSERT INTO Contributor (Name, ContribID)
+VALUES                  -- v for Bohemian Rhapsody
+        ('Queen', '1'), -- Artist, producer
+        ('Freddie Mercury', '2'), -- Writer, vocals, piano
+        ('John Deacon', '3'), -- bass
+        ('Roger Taylor', '4'), -- drums
+        ('Brian May', '5'), -- guitar
+        -- vv for Thriller
+        ('Micheal Jackson', '6'), --vocalist, artist
+        ('Rod Temperton','7'), --writer
+        ('Quincy Jones', '8'), -- producer
+        -- vv for Sweet Child O'' Mine
+        ('Guns N Roses', '9'), -- artist
+        ('Mike Clink', '10'),  --producer
+        ('Axl Rose', '11'), --writter, vocals
+        ('Slash', '12'),    -- writer, guitar
+        ('Duff', '13'),     --writer, bass
+        ('Steven Adler', '14'), --writer, drums
+        ('Izzy Stradlin', '15'),
+        --vv Hotel California
+        ('Bill Szymczyk', '16'), -- producer
+        ('Don Felder', '17'),  --guitar, writer
+        ('Glenn Frey','18'),  --guitar, writer
+        ('Joe Walsh', '19'), --guitar, writer
+        ('Don Henley', '20'), --drums, vocals
+        ('Hotel California', '21'), --artist
+        -- vv Stairway to Heaven
+
