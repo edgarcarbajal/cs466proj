@@ -1,0 +1,47 @@
+-- vv for Stereo love
+    ('Edward Maya','69'), -- Artist
+    ('Vika Jigulina','69'), -- Vocalist
+ -- vv for Ladies and Gentlemen We got him
+    ('Breakbot','69'),  -- Artist
+    ('Irfane','69'), -- Vocalist
+ -- vv for Bed Intruder Song
+    ('The Gregory Brothers','69'), -- Artist
+    ('Antoine Dodson','69'), -- Vocalist
+    ('Kelly Dodson','69'), -- Vocalist
+    ('Michael Gregory','69'), -- Producer
+ -- vv for Perfect
+    ('Benny Blanco','69'), -- Producer
+    ('Will Hicks','69'), -- Producer
+    ('Ed Sheeran','69'), -- Artist
+ -- vv for Gangnam style
+    ('PSY','69'), -- Artist
+    ('Yoo Gun Hyung','69'), -- Producer
+    ('Yang Hyun Suk','69'), -- Producer
+ -- vv for Despacito 
+    ('Daddy Yankee','69'), -- Feature
+    ('Luis Fonsi','69'), -- Artist
+    ('Andres Torres','69'), -- Producer
+    ('El Dandee','69'), -- Producer
+    ('Justin Beiber','69'), -- Feature
+ -- vv for We are number one
+    ('Mani Svavarsson','69'),  -- Producer
+    ('LazyTown','69'),  -- Artist
+    ('Stefan Karl Stefansson','69'), -- Vocalist
+ -- vv for Baba Yaga
+    ('Slaughter to prevail','69'), -- Artist
+    ('Jack Simmons','69'),  -- Guitar
+    ('Ivan Anthropocide','69'),  -- Mastering Engineer
+    ('Mike Petrov','69'), -- Bass
+    ('Evgeny Novikov','69'), -- Drums
+    ('Alex Terrible','69'),  -- Vocals
+ -- vv for F.U.N. song
+    ('Spongebob Squarepants','69'), -- Artist
+    ('Plankton','69'),  -- Feature
+    ('Albie Hecht','69'), -- Producer
+    ('Sherm Cohen','69'), -- Writer
+ -- vv for Never gonna give you up
+    ('Rick Astley','69'), -- Artist 
+    ('Mike Stock','69'), -- Writer
+    ('Matt Aitken','69'), -- Writer
+    ('Pete Waterman','69'), -- Writer
+    ('Stock Aitken Waterman','69'),  -- Producer
