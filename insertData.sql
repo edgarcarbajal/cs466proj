@@ -101,6 +101,35 @@ VALUES                  -- v for Bohemian Rhapsody
         ('Glenn Frey','18'),  --guitar, writer
         ('Joe Walsh', '19'), --guitar, writer
         ('Don Henley', '20'), --drums, vocals
-        ('Hotel California', '21'), --artist
+        ('Eagles', '21'), --artist
         -- vv Stairway to Heaven
+        -- vv Back in Black
+        ('Robert John Lange', ''), --producer
+        ('Cliff Williams', ''), --bass
+        ('Malcom Young', ''), -- guitar, writer
+        ('Angus Young', ''), --guitar, writer
+        ('Brian Johnson', ''), --vocals, writer
+        ('AC DC', ''), --artist
+        -- vv Billie Jean
+        -- quincyjones - producer
+        -- micheal jackson - producer, writer, vocals
+        --
+        -- vv Smells Like Teen Spirit
+        ('Nirvana', ''), --artist
+        ('Butch Vig', ''), --producer
+        ('Kurt Cobain', ''), --guitar, vocal, writer
+        ('Dave Grohl', ''), -- drums, writer
+        ('Krist Novoselic', ''), --bass, writer
+        -- vv Livin' on a Prayer
+        ('Bon Jovi',''), --artist
+        ('Jon Bon Jovi', ''), --guitar, vocals, writter, 
+        ('Richie Sambora', ''), --writer, guitar
+        ('Desmond Child', ''), --writer
+        ('Alec John Such', ''), --bass
+        ('Bruce Fairbairn', ''), --producer
+        -- vv Yesterday
+        ('George Martin', ''), --producer, strings
+        ('Paul McCartney',''), --vocals, guitar
+        ('John Lennon', ''), --writter
+        ('Lennon-McCartney', ''), --writter
 
