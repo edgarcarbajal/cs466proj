@@ -1,5 +1,5 @@
 INSERT INTO Customers (Email,CustID,Name,Phone)  
-        /* data set 1 */
+   /* data set 1 */
 VALUES('robertdavis1234@gmail.com',
         '1234',
         'Robert Davis',
@@ -370,4 +370,108 @@ VALUES
     ('44', '0010', 'Single', 'Guitar'),
     ('45', '0010', 'Single', 'Writer'),
     ('46', '0010', 'Single', 'Writer'),
-    -- next 10 songs --
+   -- Sweet Home Alabama --
+   ('47','0011','Duet','Producer'),
+   ('48','0011,Duet','Artist'),
+   ('49','0011,Duet','Writer'),
+   ('49','0011,Duet','Vocals'),
+   ('50','0011,Duet','Writer'),
+   ('50','0011,Duet','Guitar'),
+   ('51','0011,Duet','Writer'),
+   ('51','0011,Duet','Guitar'),
+   ('52','0011,Duet','Drums'),
+   ('53','0011,Duet','Bass'),
+   ('54','0011,Duet','Guitar'),
+   ('55','0011,Duet','Piano'),
+
+   -- Nothing Else Matters --
+   ('56','0012','Single','Producer'),
+   ('57','0012','Single','Artist'),
+   ('58','0012','Single','Producer'),
+   ('58','0012','Single','Guitar'),
+   ('59','0012','Single','Producer'),
+   ('59','0012','Single','Drums'),
+   ('60','0012','Single','Bass'),
+   ('60','0012','Single','Vocals'),
+   ('61','0012','Single','Guitar'),
+
+   -- Boys Don't Cry --
+   ('62','0013','Duet','Producer'),
+   ('63','0013','Duet','Artist'),
+   ('64','0013','Duet','Writer'),
+   ('64','0013','Duet','Guitar'),
+   ('65','0013','Duet','Writer'),
+   ('65','0013','Duet','Drums'),
+   ('66','0013','Duet','Writer'),
+   ('66','0013','Duet','Guitar'),
+
+   -- Enter Sandman --
+   ('56','0014','Single','Producer'),
+   ('57','0014','Single','Artist'),
+   ('58','0014','Single','Producer'),
+   ('58','0014','Single','Guitar'),
+   ('59','0014','Single','Producer'),
+   ('59','0014','Single','Drums'),
+   ('60','0014','Single','Bass'),
+   ('60','0014','Single','Vocals'),
+   ('61','0014','Single','Guitar'),
+
+   -- Waterloo --
+   ('67','0015','Duet','Producer'),
+   ('68','0015','Duet','Artist'),
+   ('69','0015','Duet','Producer'),
+   ('69','0015','Duet','Writer'),
+   ('69','0015','Duet','Guitar'),
+   ('70','0015','Duet','Writer'),
+   ('71','0015','Duet','Drums'),
+   ('73','0015','Duet','Guitar'),
+   ('74','0015','Duet','Vocals'),
+   ('75','0015','Duet','Vocals'),
+
+   -- Like a Rolling Stone --
+   ('76','0016','Single','Producer'),
+   ('77','0016','Single','Artist'),
+   ('78','0016','Single','Writer'),
+   ('78','0016','Single','Harmonica'),
+   ('78','0016','Single','Guitar'),
+   ('79','0016','Single','Bass'),
+   ('80','0016','Single','Guitar'),
+   ('81','0016','Single','Piano'),
+   ('82','0016','Single','Drums'),
+
+   -- I will Always Love You --
+   ('83','0017','Duet','Producer'),
+   ('84','0017','Duet','Artist'),
+   ('85','0017','Duet','Writer'),
+   ('86','0017','Duet','Bass'),
+   ('87','0017','Duet','Saxophone'),
+   ('88','0017','Duet','Drums'),
+
+   -- Paint It Back --
+   ('89','0018','Single','Producer'),
+   ('90','0018','Single','Artist'),
+   ('91','0018','Single','Writer'),
+   ('91','0018','Single','Vocals'),
+   ('92','0018','Single','Writer'),
+   ('92','0018','Single','Guitar'),
+   ('93','0018','Single','Bass'),
+   ('94','0018','Single','Drums'),
+
+   -- More Than Words -- 
+   ('95','0019','Duet','Producer'),
+   ('96','0019','Duet','Artist'),
+   ('97','0019','Duet','Writer'),
+   ('98','0019','Duet','Writer'),
+
+   -- Every Breath You Take -- 
+   ('99','0020','Single','Producer'),
+   ('99','0020','Single','Artist'),
+   ('100','0020','Single','Producer'),
+   ('101','0020','Single','Writer'),
+   ('101','0020','Single','Guitar'),
+   ('101','0020','Single','Vocals'),
+   ('101','0020','Single','Piano'),
+   ('102','0020','Single','Drums'),
+   ('103','0020','Single','Guitar'), 
+
+   -- last 10 songs
