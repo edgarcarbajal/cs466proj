@@ -475,3 +475,17 @@ VALUES
    ('103','0020','Single','Guitar'), 
 
    -- last 10 songs
+
+
+
+
+
+   --- end of stuff contibutes table here
+
+INSERT INTO PriorityQueues (CustID, SongID, Version, Time, Money)
+VALUES
+    ('5555', '0025', 'Single', '2023-04-20 16:36:30', 12.50),
+    ('7890', '0026', 'Duet', '2023-04-20 16:45:22', 2.75),
+    ('2468', '0027', 'Duet', '2023-04-20 16:45:39', 5.00),
+    ('2222', '0028', 'Single', '2023-04-20 16:51:00', 10.50),
+    ('7777', '0029', 'Single', '2023-04-20 17:23:00', 3.00);
