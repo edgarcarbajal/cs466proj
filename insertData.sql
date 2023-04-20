@@ -103,33 +103,168 @@ VALUES                  -- v for Bohemian Rhapsody
         ('Don Henley', '20'), --drums, vocals
         ('Eagles', '21'), --artist
         -- vv Stairway to Heaven
+        ('Jimmy Page','22'), -- producer,writer,guitar 
+        ('Robert Plant','23'), -- writer, vocals
+        ('John Paul Jones','24'), -- guitar, piano
+        ('John Bonham','25'), -- drums
         -- vv Back in Black
-        ('Robert John Lange', ''), --producer
-        ('Cliff Williams', ''), --bass
-        ('Malcom Young', ''), -- guitar, writer
-        ('Angus Young', ''), --guitar, writer
-        ('Brian Johnson', ''), --vocals, writer
-        ('AC DC', ''), --artist
+        ('Robert John Lange', '26'), --producer
+        ('Cliff Williams', '27'), --bass
+        ('Malcom Young', '28'), -- guitar, writer
+        ('Angus Young', '29'), --guitar, writer
+        ('Brian Johnson', '30'), --vocals, writer
+        ('AC DC', '31'), --artist
         -- vv Billie Jean
         -- quincyjones - producer
         -- micheal jackson - producer, writer, vocals
         --
         -- vv Smells Like Teen Spirit
-        ('Nirvana', ''), --artist
-        ('Butch Vig', ''), --producer
-        ('Kurt Cobain', ''), --guitar, vocal, writer
-        ('Dave Grohl', ''), -- drums, writer
-        ('Krist Novoselic', ''), --bass, writer
+        ('Nirvana', '32'), --artist
+        ('Butch Vig', '33'), --producer
+        ('Kurt Cobain', '34'), --guitar, vocal, writer
+        ('Dave Grohl', '35'), -- drums, writer
+        ('Krist Novoselic', '36'), --bass, writer
         -- vv Livin' on a Prayer
-        ('Bon Jovi',''), --artist
-        ('Jon Bon Jovi', ''), --guitar, vocals, writter, 
-        ('Richie Sambora', ''), --writer, guitar
-        ('Desmond Child', ''), --writer
-        ('Alec John Such', ''), --bass
-        ('Bruce Fairbairn', ''), --producer
+        ('Bon Jovi','37'), --artist
+        ('Jon Bon Jovi', '38'), --guitar, vocals, writter, 
+        ('Richie Sambora', '39'), --writer, guitar
+        ('Desmond Child', '40'), --writer
+        ('Alec John Such', '41'), --bass
+        ('Bruce Fairbairn', '42'), --producer
         -- vv Yesterday
-        ('George Martin', ''), --producer, strings
-        ('Paul McCartney',''), --vocals, guitar
-        ('John Lennon', ''), --writter
-        ('Lennon-McCartney', ''), --writter
+        ('George Martin', '43'), --producer, strings
+        ('Paul McCartney','44'), --vocals, guitar
+        ('John Lennon', '45'), --writter
+        ('Lennon-McCartney', '46'), --writter
+        --
+        -- Sweet Home Alabama -- 
+    ('Al Kooper', '47'), -- Producer
+    ('Lynyrd Skynyrd', '48'), -- artist
+    ('Ronnie Van Zant', '49'), -- writer, vocals
+    ('Gary Rossington', '50'), -- writer, guitar
+    ('Ed King', '51'), -- writer, guitar
+    ('Bob Burns', '52'), -- drums 
+    ('Leon Wilkeson', '53'),-- bass 
+    ('Allen Collins', '54'), -- guitar
+    ('Billy Powell', '55'), -- piano
+
+    -- Nothing Else Matters --
+    ('Bob Rock', '56'), --producer
+    ('Metallica', '57'),--artist
+    ('James Hetfield', '58'), --producer, guitar
+    ('Lars Ulrich', '59'), --producer, drums 
+    ('Jason Newsted', '60'), -- bass, vocals
+    ('Kirk Hammett', '61'), -- guitar 
+
+    -- Boys Don''t Cry -- 
+    ('Chris Parry', '62'), -- producer 
+    ('The Cure', '63'),-- artist
+    ('Michael Dempsey', '64'), -- writer, guitar 
+    ('Lol Tolhurst', '65'), -- writer, drums 
+    ('Robert Smith', '66'), -- writer, guitar
+
+ /*   -- Enter Sandman -- 
+    ('Bob Rock'), --producer
+    ('Metallica'),--artist
+    ('James Hetfield'), --producer, guitar
+    ('Lars Ulrich'), --producer, drums 
+    ('Jason Newsted'), -- bass, vocals
+    ('Kirk Hammett'), -- guitar */
+    
+    -- Waterloo -- 
+    ('Benny Anderson', '67'),-- producer, writer
+    ('ABBA', '68'), -- artist
+    ('Bjön Ulvaeus', '69'),-- producer, writer, guitar
+    ('Stig Anderson', '70'),-- writer
+    ('Ola Brunkert', '71'),-- drums
+    ('Rutger Gunnarsson', '72'),-- bass 
+    ('Janne Schaffer', '73'), -- guitar
+    ('Anni-Frid Lyngstad','74'),-- vocals 
+    ('Agnetha Fältskog', '75'), -- vocals 
+
+    -- Like a Rolling Stone -- 
+    ('Tom Wilson', '76'), -- producer
+    ('Bob Dylan', '77'), --artist
+    ('Bob Dylan', '78'), -- writer , Harmonica, guitar 
+    ('Joe Macho Jr.', '79'), -- bass
+    ('Mike Bloomfield', '80'), -- guitar 
+    ('Frank Owens', '81'), -- piano 
+    ('Bobby Gregg', '82'), -- drums
+
+    -- I Will Always Love You -- 
+    ('David Foster', '83'), -- producer  
+    ('Whitney Houston', '84'), --artist
+    ('Dolly Parton ', '85'), -- writer 
+    ('Neil Stubenhaus', '86'), -- bass  
+    ('Kirk Whalum', '87'), -- Saxophone 
+    ('Ricky Lawson', '88'), -- drums 
+
+    --Paint It Black--
+    ('Andrew Loog Oldham', '89'), -- producer
+    ('Rolling Stone', '90'), -- artist
+    ('Mick Jagger', '91'), -- writer, vocals 
+    ('Keith Richards', '92'), --writer, guitar 
+    ('Bill Wyman', '93'), -- bass 
+    ('Charile Watts', '94'), -- drums
+
+    --More Than Words --
+    ('Michael Wagener', '95'), -- producer
+    ('Extreme', '96'), -- artist
+    ('Gary Cherone', '97'), -- writer 
+    ('Nuno Bettencourt', '98'), -- writer
+
+    --Every Breath You Take --
+    ('The Police', '99'), -- producer , artist 
+    ('Hugh Padgham', '100'), -- producer 
+    ('Sting', '101'), -- writer, guitar, vocals, piano
+    ('Stewart Copeland', '102'), -- drums 
+    ('Andy Summers', '103'), -- guit
+    --
+ -- vv for Stereo love
+    ('Edward Maya','104'), -- Artist
+    ('Vika Jigulina','105'), -- Vocalist
+ -- vv for Ladies and Gentlemen We got him
+    ('Breakbot','106'),  -- Artist
+    ('Irfane','107'), -- Vocalist
+ -- vv for Bed Intruder Song
+    ('The Gregory Brothers','108'), -- Artist
+    ('Antoine Dodson','109'), -- Vocalist
+    ('Kelly Dodson','110'), -- Vocalist
+    ('Michael Gregory','111'), -- Producer
+ -- vv for Perfect
+    ('Benny Blanco','112'), -- Producer
+    ('Will Hicks','113'), -- Producer
+    ('Ed Sheeran','114'), -- Artist
+ -- vv for Gangnam style
+    ('PSY','115'), -- Artist
+    ('Yoo Gun Hyung','116'), -- Producer
+    ('Yang Hyun Suk','117'), -- Producer
+ -- vv for Despacito 
+    ('Daddy Yankee','118'), -- Feature
+    ('Luis Fonsi','119'), -- Artist
+    ('Andres Torres','120'), -- Producer
+    ('El Dandee','121'), -- Producer
+    ('Justin Beiber','122'), -- Feature
+ -- vv for We are number one
+    ('Mani Svavarsson','123'),  -- Producer
+    ('LazyTown','124'),  -- Artist
+    ('Stefan Karl Stefansson','125'), -- Vocalist
+ -- vv for Baba Yaga
+    ('Slaughter to prevail','126'), -- Artist
+    ('Jack Simmons','127'),  -- Guitar
+    ('Ivan Anthropocide','128'),  -- Mastering Engineer
+    ('Mike Petrov','129'), -- Bass
+    ('Evgeny Novikov','130'), -- Drums
+    ('Alex Terrible','131'),  -- Vocals
+ -- vv for F.U.N. song
+    ('Spongebob Squarepants','132'), -- Artist
+    ('Plankton','133'),  -- Feature
+    ('Albie Hecht','134'), -- Producer
+    ('Sherm Cohen','135'), -- Writer
+ -- vv for Never gonna give you up
+    ('Rick Astley','136'), -- Artist 
+    ('Mike Stock','137'), -- Writer
+    ('Matt Aitken','138'), -- Writer
+    ('Pete Waterman','139'), -- Writer
+    ('Stock Aitken Waterman','140'),  -- Producer
 
