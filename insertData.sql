@@ -74,7 +74,17 @@ VALUES
     ('Every Breath You Take', 'Pop', '0020', 1983, 'Single', '00:04:13'),
     ('What''s Going On', 'Pop', '0021', 1971, 'Duet', '00:03:51'),
     ('My Heart Will Go On', 'Pop', '0022', 1997, 'Single', '00:04:41'),
-    ('Born to Run', 'Rock', '0023', 1975, 'Duet', '00:04:30');
+    ('Born to Run', 'Rock', '0023', 1975, 'Duet', '00:04:30')
+    ('Stereo Love', 'Meme', '0021', 2009, 'Duet', '00:04:12'),
+    ('Ladies and Gentlemen We Got Him', 'Meme', '0022', 2019, 'Single', '00:03:34'),
+    ('Bed Intruder Song', 'Meme', '0023', 2010, 'Single', '00:03:23'),
+    ('Perfect', 'Pop', '0024', 2017, 'Single', '00:04:24'),
+    ('GANGNAM STYLE', 'Korean', '0025', 2012, 'Single', '00:03:43'),
+    ('Despacito', 'Pop', '0026', 2017, 'Duet', '00:04:11'),
+    ('We are Number One', 'Meme', '0027', 2014, 'Duet', '00:02:23'),
+    ('Baba Yaga', 'Death Metal', '0028', 2021, 'Single', '00:04:18'),
+    ('F.U.N. Song', 'Meme', '0029', 2009, 'Duet', '00:05:31'),
+    ('Never Gonna Give You Up', 'Meme', '0030', 1987, 'Single', '00:03:33');
 
 INSERT INTO Contributor (Name, ContribID)
 VALUES                  -- v for Bohemian Rhapsody
@@ -266,5 +276,5 @@ VALUES                  -- v for Bohemian Rhapsody
     ('Mike Stock','137'), -- Writer
     ('Matt Aitken','138'), -- Writer
     ('Pete Waterman','139'), -- Writer
-    ('Stock Aitken Waterman','140'),  -- Producer
+    ('Stock Aitken Waterman','140');  -- Producer
 
