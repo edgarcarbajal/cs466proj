@@ -1,0 +1,15 @@
+body
+{
+    background-color: indigo;
+}
+
+h1
+{
+    color: white;
+}
+
+p
+{
+    color: white;
+    border: 5px solid magenta;
+}
