@@ -13,12 +13,12 @@
         </p>
 
     <?php
-        include PDOStartup.php
+        include "../php_files/PDOStartup.php";
 
-        tblset = $pdo->prepare('SELECT * FROM Song');
-        tblset->execute();
+        $tblset = $pdo->prepare("SELECT * FROM Song");
+        $tblset->execute();
 
-        createTable(tblset);
+        createTable($tblset);
     ?>
         <a href="startpage.html">
             <input type="button" value="Go Back">
