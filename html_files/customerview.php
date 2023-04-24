@@ -1,4 +1,3 @@
-<?php
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,16 +12,16 @@
             Choose a song to queue.
         </p>
 
+    <?php
         include PDOStartup.php
 
         tblset = $pdo->prepare('SELECT * FROM Song');
         tblset->execute();
 
         createTable(tblset);
-
+    ?>
         <a href="startpage.html">
             <input type="button" value="Go Back">
         </a>
     </body>
 </html>
-?>

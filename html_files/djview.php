@@ -1,4 +1,3 @@
-<?php
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
@@ -8,9 +7,11 @@
     <body>
         <h1>Nothing here yet... (DJ View)</h1>
 
+        <?php
+        ?>
+
         <a href="startpage.html">
             <input type="button" value="Go Back">
         </a>
     </body>
 </html>
-?>

@@ -9,7 +9,7 @@
 # =============================================================================
 
 
-include "MariaDB_secrets.php"; 
+include "~/public_html/MariaDB_secrets.php"; 
 #login creds stored in here as variables
 include "showTables.php"; 
 #function stored here that helps with printing tables
