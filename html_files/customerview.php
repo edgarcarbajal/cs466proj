@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,10 +7,22 @@
     </head>
 
     <body>
-        <h1>Nothing here yet... (Customer View)</h1>
+        <h1>Pick a Song!</h1>
+
+        <p>
+            Choose a song to queue.
+        </p>
+
+        include PDOStartup.php
+
+        tblset = $pdo->prepare('SELECT * FROM Song');
+        tblset->execute();
+
+        createTable(tblset);
 
         <a href="startpage.html">
             <input type="button" value="Go Back">
         </a>
     </body>
 </html>
+?>

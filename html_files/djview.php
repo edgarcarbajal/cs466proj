@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
@@ -13,3 +13,4 @@
         </a>
     </body>
 </html>
+?>
