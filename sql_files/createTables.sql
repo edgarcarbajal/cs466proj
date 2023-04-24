@@ -57,7 +57,7 @@ SongID VARCHAR(10),
 Version VARCHAR(16),
 Role VARCHAR(20),
 
-PRIMARY KEY(ContribID, SongID, Version),
+PRIMARY KEY(ContribID, SongID, Version, Role),
 FOREIGN KEY(ContribID) REFERENCES Contributor(ContribID),
 FOREIGN KEY (SongID, Version) REFERENCES Song(SongID, Version)
 );

@@ -1,54 +1,54 @@
 INSERT INTO Customers (Email,CustID,Name,Phone)  
    /* data set 1 */
 VALUES('robertdavis1234@gmail.com',
-        '1234',
+        '1243',
         'Robert Davis',
-        '555-123-4567'),
+        '5551234567'),
         /* data set 2 */
         (' sarahjohnson5678@yahoo.com',
         '5678',
         'Sarah Johnson',
-        '555-987-6543'),
+        '5559876543'),
         /* data set 3 */
         ('mikejackson9101@hotmail.com',
         '9101',
         'Mike Jackson',
-        '555-555-1212'),
+        '5555551212'),
         /* data set 4 */
         ('janetwilson1212@gmail.com',
         '1212',
         ' Janet Wilson',
-        '555-555-5555'),
+        '5555555555'),
         /* data set 5 */
         ('jasonsanchez3434@yahoo.com',
         '3434',
         'Jason Sanchez',
-        '555-555-1234'),
+        '5555551234'),
         /* data set 6 */
         ('karenrodriguez5555@hotmail.com',
         '5555',
         'Karen Johnson',
-        '555-555-4321'),
+        '5555554321'),
         /* data set 7 */
         ('davidbrown7890@gmail.com',
         '7890',
         'David Brown',
-        '555-555-9876'),
+        '5555559876'),
         /* data set 8 */
         ('amandamiller2468@yahoo.com',
         '2468',
         'Amanda Miller',
-        '555-555-3478'),
+        '5555553478'),
         /* data set 9 */
         ('kevinsullivan2222@hotmail.com',
         '2222',
         'Kevin Sullivan',
-        '555-555-2121'),
+        '5555552121'),
         /* data set 10 */
         ('lisajones7777@gmail.com',
         '7777',
         'Lisa Jones',
-        '773-301-4908');
+        '7733014908');
 
 INSERT INTO Song (Title, Genre, SongID, Year, Version, Duration) 
 VALUES 
@@ -72,11 +72,8 @@ VALUES
     ('Paint It Black', 'Rock', '0018', 1966, 'Single', '00:03:45'),
     ('More Than Words', 'Rock', '0019', 1990, 'Duet', '00:05:35'),
     ('Every Breath You Take', 'Pop', '0020', 1983, 'Single', '00:04:13'),
-    ('What''s Going On', 'Pop', '0021', 1971, 'Duet', '00:03:51'),
-    ('My Heart Will Go On', 'Pop', '0022', 1997, 'Single', '00:04:41'),
-    ('Born to Run', 'Rock', '0023', 1975, 'Duet', '00:04:30'),
     ('Stereo Love', 'Meme', '0021', 2009, 'Duet', '00:04:12'),
-    ('Ladies and Gentlemen We Got Him', 'Meme', '0022', 2019, 'Single', '00:03:34'),
+    ('Ladies and Gentlemen', 'Meme', '0022', 2019, 'Single', '00:03:34'),
     ('Bed Intruder Song', 'Meme', '0023', 2010, 'Single', '00:03:23'),
     ('Perfect', 'Pop', '0024', 2017, 'Single', '00:04:24'),
     ('GANGNAM STYLE', 'Korean', '0025', 2012, 'Single', '00:03:43'),
@@ -94,58 +91,58 @@ VALUES                  -- v for Bohemian Rhapsody
         ('Roger Taylor', '4'), -- drums
         ('Brian May', '5'), -- guitar
         -- vv for Thriller
-        ('Micheal Jackson', '6'), --vocalist, artist
-        ('Rod Temperton','7'), --writer
+        ('Micheal Jackson', '6'), -- vocalist, artist
+        ('Rod Temperton','7'), -- writer
         ('Quincy Jones', '8'), -- producer
         -- vv for Sweet Child O'' Mine
         ('Guns N Roses', '9'), -- artist
-        ('Mike Clink', '10'),  --producer
-        ('Axl Rose', '11'), --writter, vocals
-        ('Slash', '12'),    -- writer, guitar
-        ('Duff', '13'),     --writer, bass
-        ('Steven Adler', '14'), --writer, drums
+        ('Mike Clink', '10'),  -- producer
+        ('Axl Rose', '11'), -- writter, vocals
+        ('Slash', '12'),    --  writer, guitar
+        ('Duff', '13'),     -- writer, bass
+        ('Steven Adler', '14'), -- writer, drums
         ('Izzy Stradlin', '15'),
-        --vv Hotel California
+        -- vv Hotel California
         ('Bill Szymczyk', '16'), -- producer
-        ('Don Felder', '17'),  --guitar, writer
-        ('Glenn Frey','18'),  --guitar, writer
-        ('Joe Walsh', '19'), --guitar, writer
-        ('Don Henley', '20'), --drums, vocals
-        ('Eagles', '21'), --artist
+        ('Don Felder', '17'),  -- guitar, writer
+        ('Glenn Frey','18'),  -- guitar, writer
+        ('Joe Walsh', '19'), -- guitar, writer
+        ('Don Henley', '20'), -- drums, vocals
+        ('Eagles', '21'), -- artist
         -- vv Stairway to Heaven
         ('Jimmy Page','22'), -- producer,writer,guitar 
         ('Robert Plant','23'), -- writer, vocals
         ('John Paul Jones','24'), -- guitar, piano
         ('John Bonham','25'), -- drums
-        -- vv Back in Black
-        ('Robert John Lange', '26'), --producer
-        ('Cliff Williams', '27'), --bass
+        -- vv Back in Black 
+        ('Robert John Lange', '26'), -- producer
+        ('Cliff Williams', '27'), -- bass
         ('Malcom Young', '28'), -- guitar, writer
-        ('Angus Young', '29'), --guitar, writer
-        ('Brian Johnson', '30'), --vocals, writer
-        ('AC DC', '31'), --artist
+        ('Angus Young', '29'), -- guitar, writer
+        ('Brian Johnson', '30'), -- vocals, writer
+        ('AC DC', '31'), -- artist
         -- vv Billie Jean
         -- quincyjones - producer
         -- micheal jackson - producer, writer, vocals
         --
         -- vv Smells Like Teen Spirit
-        ('Nirvana', '32'), --artist
-        ('Butch Vig', '33'), --producer
-        ('Kurt Cobain', '34'), --guitar, vocal, writer
+        ('Nirvana', '32'), -- artist
+        ('Butch Vig', '33'), -- producer
+        ('Kurt Cobain', '34'), -- guitar, vocal, writer
         ('Dave Grohl', '35'), -- drums, writer
-        ('Krist Novoselic', '36'), --bass, writer
+        ('Krist Novoselic', '36'), -- bass, writer
         -- vv Livin' on a Prayer
-        ('Bon Jovi','37'), --artist
-        ('Jon Bon Jovi', '38'), --guitar, vocals, writter, 
-        ('Richie Sambora', '39'), --writer, guitar
-        ('Desmond Child', '40'), --writer
-        ('Alec John Such', '41'), --bass
-        ('Bruce Fairbairn', '42'), --producer
+        ('Bon Jovi','37'), -- artist
+        ('Jon Bon Jovi', '38'), -- guitar, vocals, writter, 
+        ('Richie Sambora', '39'), -- writer, guitar
+        ('Desmond Child', '40'), -- writer
+        ('Alec John Such', '41'), -- bass
+        ('Bruce Fairbairn', '42'), -- producer
         -- vv Yesterday
-        ('George Martin', '43'), --producer, strings
-        ('Paul McCartney','44'), --vocals, guitar
-        ('John Lennon', '45'), --writter
-        ('Lennon-McCartney', '46'), --writter
+        ('George Martin', '43'), -- producer, strings
+        ('Paul McCartney','44'), -- vocals, guitar
+        ('John Lennon', '45'), -- writter
+        ('Lennon-McCartney', '46'), -- writter
         --
         -- Sweet Home Alabama -- 
     ('Al Kooper', '47'), -- Producer
@@ -159,30 +156,30 @@ VALUES                  -- v for Bohemian Rhapsody
     ('Billy Powell', '55'), -- piano
 
     -- Nothing Else Matters --
-    ('Bob Rock', '56'), --producer
-    ('Metallica', '57'),--artist
-    ('James Hetfield', '58'), --producer, guitar
-    ('Lars Ulrich', '59'), --producer, drums 
+    ('Bob Rock', '56'), -- producer
+    ('Metallica', '57'),-- artist
+    ('James Hetfield', '58'), -- producer, guitar
+    ('Lars Ulrich', '59'), -- producer, drums 
     ('Jason Newsted', '60'), -- bass, vocals
     ('Kirk Hammett', '61'), -- guitar 
 
     -- Boys Don''t Cry -- 
     ('Chris Parry', '62'), -- producer 
-    ('The Cure', '63'),-- artist
+    ('The Cure', '63'), -- artist
     ('Michael Dempsey', '64'), -- writer, guitar 
     ('Lol Tolhurst', '65'), -- writer, drums 
     ('Robert Smith', '66'), -- writer, guitar
 
  /*   -- Enter Sandman -- 
-    ('Bob Rock'), --producer
-    ('Metallica'),--artist
-    ('James Hetfield'), --producer, guitar
-    ('Lars Ulrich'), --producer, drums 
+    ('Bob Rock'), -- producer
+    ('Metallica'), -- artist
+    ('James Hetfield'), -- producer, guitar
+    ('Lars Ulrich'), -- producer, drums 
     ('Jason Newsted'), -- bass, vocals
     ('Kirk Hammett'), -- guitar */
     
     -- Waterloo -- 
-    ('Benny Anderson', '67'),-- producer, writer
+    ('Benny Anderson', '67'), -- producer, writer
     ('ABBA', '68'), -- artist
     ('Bjön Ulvaeus', '69'),-- producer, writer, guitar
     ('Stig Anderson', '70'),-- writer
@@ -194,7 +191,7 @@ VALUES                  -- v for Bohemian Rhapsody
 
     -- Like a Rolling Stone -- 
     ('Tom Wilson', '76'), -- producer
-    ('Bob Dylan', '77'), --artist
+    ('Bob Dylan', '77'), -- artist
     ('Bob Dylan', '78'), -- writer , Harmonica, guitar 
     ('Joe Macho Jr.', '79'), -- bass
     ('Mike Bloomfield', '80'), -- guitar 
@@ -203,27 +200,27 @@ VALUES                  -- v for Bohemian Rhapsody
 
     -- I Will Always Love You -- 
     ('David Foster', '83'), -- producer  
-    ('Whitney Houston', '84'), --artist
+    ('Whitney Houston', '84'), -- artist
     ('Dolly Parton ', '85'), -- writer 
     ('Neil Stubenhaus', '86'), -- bass  
     ('Kirk Whalum', '87'), -- Saxophone 
     ('Ricky Lawson', '88'), -- drums 
 
-    --Paint It Black--
+    -- Paint It Black --
     ('Andrew Loog Oldham', '89'), -- producer
     ('Rolling Stone', '90'), -- artist
     ('Mick Jagger', '91'), -- writer, vocals 
-    ('Keith Richards', '92'), --writer, guitar 
+    ('Keith Richards', '92'), -- writer, guitar 
     ('Bill Wyman', '93'), -- bass 
     ('Charile Watts', '94'), -- drums
 
-    --More Than Words --
+    -- More Than Words --
     ('Michael Wagener', '95'), -- producer
     ('Extreme', '96'), -- artist
     ('Gary Cherone', '97'), -- writer 
     ('Nuno Bettencourt', '98'), -- writer
 
-    --Every Breath You Take --
+    -- Every Breath You Take --
     ('The Police', '99'), -- producer , artist 
     ('Hugh Padgham', '100'), -- producer 
     ('Sting', '101'), -- writer, guitar, vocals, piano
@@ -372,17 +369,17 @@ VALUES
     ('46', '0010', 'Single', 'Writer'),
    -- Sweet Home Alabama --
    ('47','0011','Duet','Producer'),
-   ('48','0011,Duet','Artist'),
-   ('49','0011,Duet','Writer'),
-   ('49','0011,Duet','Vocals'),
-   ('50','0011,Duet','Writer'),
-   ('50','0011,Duet','Guitar'),
-   ('51','0011,Duet','Writer'),
-   ('51','0011,Duet','Guitar'),
-   ('52','0011,Duet','Drums'),
-   ('53','0011,Duet','Bass'),
-   ('54','0011,Duet','Guitar'),
-   ('55','0011,Duet','Piano'),
+   ('48','0011','Duet','Artist'),
+   ('49','0011','Duet','Writer'),
+   ('49','0011','Duet','Vocals'),
+   ('50','0011','Duet','Writer'),
+   ('50','0011','Duet','Guitar'),
+   ('51','0011','Duet','Writer'),
+   ('51','0011','Duet','Guitar'),
+   ('52','0011','Duet','Drums'),
+   ('53','0011','Duet','Bass'),
+   ('54','0011','Duet','Guitar'),
+   ('55','0011','Duet','Piano'),
 
    -- Nothing Else Matters --
    ('56','0012','Single','Producer'),
@@ -479,7 +476,7 @@ VALUES
    ('104','0021','Duet','Artist'),
    ('105','0021','Duet','Vocalist'),
 
-   --Ladies and Gentlemen We got him
+   -- Ladies and Gentlemen We got him
    ('106','0022','Single','Artist'),
    ('107','0022','Single','Vocalist'),
 
@@ -530,7 +527,7 @@ VALUES
    ('137','0030','Single','Writer'),
    ('138','0030','Single','Writer'),
    ('139','0030','Single','Writer'),
-   ('140','0030','Single','Producer'),
+   ('140','0030','Single','Producer');
 
 
    --- end of stuff contibutes table here
@@ -541,11 +538,11 @@ VALUES
     ('7890', '0026', 'Duet', '2023-04-20 16:45:22', 2.75),
     ('2468', '0027', 'Duet', '2023-04-20 16:45:39', 5.00),
     ('2222', '0028', 'Single', '2023-04-20 16:51:00', 10.50),
-    ('7777', '0029', 'Single', '2023-04-20 17:23:00', 3.00);
+    ('7777', '0029', 'Duet', '2023-04-20 17:23:00', 3.00);   
 
     INSERT INTO Queues(CustID,SongID,Version,Time)
 VALUES 
-    ('1234','0001','Duet','2023-04-20 4:33:40'),
+    ('1243','0001','Duet','2023-04-20 4:33:40'),
     ('2222','0002','Single','2023-04-20 10:45:04'),
     ('7777','0003','Duet','2023-04-20 12:30:20'),
     ('7890','0004','Single','2023-04-20 6:45:21'),
