@@ -475,9 +475,62 @@ VALUES
    ('103','0020','Single','Guitar'), 
 
    -- last 10 songs
+   -- Stereo Love --
+   ('104','0021','Duet','Artist'),
+   ('105','0021','Duet','Vocalist'),
 
+   --Ladies and Gentlemen We got him
+   ('106','0022','Single','Artist'),
+   ('107','0022','Single','Vocalist'),
 
+   -- Bed Intruder Song --
+   ('108','0023','Single','Artist'),
+   ('109','0023','Single','Vocalist'),
+   ('110','0023','Single','Vocalist'),
+   ('111','0023','Single','Producer'),
 
+   -- Perfect --
+   ('112','0024','Single','Producer'),
+   ('113','0024','Single','Producer'),
+   ('114','0024','Single','Artist'),
+   
+   -- Gangnam Style --
+   ('115','0025','Single','Artist'),
+   ('116','0025','Single','Producer'),
+   ('117','0025','Single','Producer'),
+
+   -- Despacito --
+   ('118','0026','Duet','Feature'),
+   ('119','0026','Duet','Artist'),
+   ('120','0026','Duet','Producer'),
+   ('121','0026','Duet','Producer'),
+   ('122','0026','Duet','Feature'),
+
+   -- We Are Number One --
+   ('123','0027','Duet','Producer'),
+   ('124','0027','Duet','Artist'),
+   ('125','0027','Duet','Vocalist'),
+
+   -- Baba Yaga --
+   ('126','0028','Single','Artist'),
+   ('127','0028','Single','Guitar'),
+   ('128','0028','Single','Mastering Engineer'),
+   ('129','0028','Single','Bass'),
+   ('130','0028','Single','Drums'),
+   ('131','0028','Single','Vocals'),
+
+   -- F.U.N. Song --
+   ('132','0029','Duet','Artist'),
+   ('133','0029','Duet','Feature'),
+   ('134','0029','Duet','Producer'),
+   ('135','0029','Duet','Writer'),
+
+   -- Never gonna give you up --
+   ('136','0030','Single','Artist'),
+   ('137','0030','Single','Writer'),
+   ('138','0030','Single','Writer'),
+   ('139','0030','Single','Writer'),
+   ('140','0030','Single','Producer'),
 
 
    --- end of stuff contibutes table here
