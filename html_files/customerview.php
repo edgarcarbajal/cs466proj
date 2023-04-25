@@ -9,17 +9,23 @@
         <h1>Pick a Song!</h1>
 
         <p>
-            Choose a song to queue.
+            Choose a song to queue by writing the SongID below.
         </p>
+    
+        <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/waitroom.php" method="GET">
 
-    <?php
-        include "../php_files/PDOStartup.php";
+        <?php
+            include "../php_files/PDOStartup.php";
 
-        $tblset = $pdo->prepare("SELECT * FROM Song");
-        $tblset->execute();
+            $tblset = $pdo->prepare("SELECT SongID, Title, Genre, Version, Year, Duration FROM Song");
+            $tblset->execute();
 
-        createTable($tblset);
-    ?>
+            createTableRadio($tblset);
+        ?>
+
+        <input type="submit" value="Submit">
+        </form>
+
         <a href="startpage.html">
             <input type="button" value="Go Back">
         </a>
