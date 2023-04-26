@@ -8,12 +8,9 @@
     <body>
         <h1>Waiting Room</h1>
 
-        <p>
-            Choose a song to queue by writing the SongID below.
-        </p>
 
         <?php
-            include "PDOStartup.php";
+            include "../php_files/PDOStartup.php";
             
             $test = $_GET["selectsong"];
             echo "selectsong = $test";
