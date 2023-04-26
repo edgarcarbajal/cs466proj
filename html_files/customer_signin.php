@@ -21,9 +21,12 @@
                 <input type="text" id="custid" name="custidtf"><br>
             </p>
             <input type="submit" value="Sign In">
+        
+        </form>
 
             <br><br>
-
+        
+        <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/cust_cont.php" method="GET">
             <h2>Create Customer ID</h2>
             <p>
                 <label for="name">Name:</label><br>
@@ -37,13 +40,12 @@
             </p>
             <input type="submit" value="Create ID">
 
+        </form>
             <?php
                 include "../php_files/PDOStartup.php";
             
             
             ?>
-
-        </form>
 
         <a href="startpage.html">
             <input type="button" value="Go Back to Start Page">
