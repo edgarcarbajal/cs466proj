@@ -20,6 +20,7 @@
                 <label for="custid">Customer ID:</label><br>
                 <input type="text" id="custid" name="custidtf"><br>
             </p>
+            <input type="submit" value="Sign In">
 
             <br><br>
 
@@ -34,6 +35,7 @@
                 <label for="phone">Phone Number (no dashes):</label><br>
                 <input type="text" id="phone" name="phonetf"><br>
             </p>
+            <input type="submit" value="Create ID">
 
             <?php
                 include "../php_files/PDOStartup.php";

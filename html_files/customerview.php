@@ -17,7 +17,9 @@
         <?php
             include "../php_files/PDOStartup.php";
 
-            $tblset = $pdo->prepare("SELECT SongID, Title, Genre, Version, Year, Duration FROM Song");
+            $q = "SELECT Song.SongID, Title, Contributor.Name Artist, Genre, Song.Version, Year, Duration FROM Song, Contributor, Contributes ";
+            $q = $q . "WHERE Song.SongID = Contributes.SongID AND Contributor.ContribID = Contributes.ContribID AND Role = 'Artist'";
+            $tblset = $pdo->prepare($q);
             $tblset->execute();
 
             createTableRadio($tblset);

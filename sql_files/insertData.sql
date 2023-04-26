@@ -253,7 +253,11 @@ VALUES                  -- v for Bohemian Rhapsody
     ('Mike Stock'), -- 137Writer
     ('Matt Aitken'), -- 138Writer
     ('Pete Waterman'), -- 139Writer
-    ('Stock Aitken Waterman');  -- 140Producer
+    ('Stock Aitken Waterman'),  -- 140Producer
+   -- missed artists below:
+   ('Led Zepplin'), -- 141 artist - for song5
+   ('The Beatles'); -- 142 artist - for song10
+
 
 
 INSERT INTO Contributes (ContribID, SongID, Version, Role)
@@ -304,6 +308,7 @@ VALUES
     (24, 5, 'Duet', 'Piano'),
     (24, 5, 'Duet', 'Guitar'),
     (25, 5, 'Duet', 'Drums'),
+    (141, 5, 'Duet', 'Artist'),
     -- next --
     (26, 6, 'Single', 'Producer'),
     (27, 6, 'Single', 'Bass'),
@@ -319,6 +324,7 @@ VALUES
     (6, 7, 'Duet', 'Writer'),
     (6, 7, 'Duet', 'Vocals'),
     (6, 7, 'Duet', 'Producer'),
+    (6, 7, 'Duet', 'Artist'),
     -- next --
     (32, 8, 'Single', 'Artist'),
     (33, 8, 'Single', 'Producer'),
@@ -346,6 +352,8 @@ VALUES
     (44, 10, 'Single', 'Guitar'),
     (45, 10, 'Single', 'Writer'),
     (46, 10, 'Single', 'Writer'),
+    (142, 10, 'Single', 'Artist'),
+
    -- Sweet Home Alabama --
    (47,11,'Duet','Producer'),
    (48,11,'Duet','Artist'),
