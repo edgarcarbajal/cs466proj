@@ -38,7 +38,7 @@ function createTable($result_set)
 }
 
 
-function createTableRadio($result_set)
+function createTableRadio($result_set, $curr_sortkey, $curr_sort)
 {
     if($result_set) 
     {
@@ -51,7 +51,17 @@ function createTableRadio($result_set)
             if($i == 0)
             {
                 echo "<tr>\n";
-                foreach($row as $key => $item) { echo "<th>$key</th>"; }
+                foreach($row as $key => $item)
+                {
+                    $buttonlbl = "";
+                    if($curr_sort == "ASC") { $buttonlbl = $key . " /\ "; }
+                    else { $buttonlbl = $key . " \/ "; }
+
+                    if($curr_sortkey == $key)
+                        echo "<th><button id=\"$key\" name=\"$key\" value=\"$curr_sort\" onclick=\"sortBy('$key')\">$buttonlbl</button></th>"; 
+                    else
+                        echo "<th><button id=\"$key\" name=\"$key\" value=\"ASC\" onclick=\"sortBy('$key')\">$key</button></th>"; 
+                }
                 echo "</tr>\n";
             }
             echo "<tr>\n";
@@ -60,7 +70,7 @@ function createTableRadio($result_set)
             {
                 if($j == 0)
                 {
-                    echo "<td>"; 
+                    echo "<td>";
                     echo "<input type=\"radio\" id=\"song_$i\" name=\"selectsong\" value=\"$item\">";
                     echo "<label for=\"song_$i\">$item</label></td>";
                 }
@@ -78,6 +88,31 @@ function createTableRadio($result_set)
         }
     }
     else{ echo "<p>Table not created - Failed to obtain a result set.</p>\n"; return false; }
+ 
+    return true;
+}
+
+
+function createDropdown($result_set, $elem_name)
+{
+    if($result_set) 
+    {
+        echo "<select id=\"$elem_name\" name=\"$elem_name\">\n";
+        $i = 0;
+ 
+        while($item = $result_set->fetchColumn())
+        {
+            echo "<option value=\"$item\">$item</option>";
+            $i++;
+        }
+        echo "</select>\n"; 
+        if($i == 0)
+        {
+            echo "<p>Empty set! No dropdown was created.</p>\n";
+            return false; 
+        }
+    }
+    else{ echo "<p>Dropdown not created - Failed to obtain a result set.</p>\n"; return false; }
  
     return true;
 }
