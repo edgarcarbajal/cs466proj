@@ -6,60 +6,54 @@
 
     <body>
         <h1>Nothing here yet... (DJ View)</h1>
-
+        <form action = "https://students.cs.niu.edu/~z1899807/cs466proj/html_files/djview.php" method = "GET">
         <?php
         
         include "../php_files/PDOStartup.php";
+        // find a way to check if the url has php get values
+        if(isset($_GET['PQUEUE']))
+        {
+        $del = $pdo->prepare("DELETE FROM PriorityQueues where CustID = ? AND Version = ? and SongID = ?");
 
+        $ex = explode(",",$_GET['PQUEUE']);
+        $del->execute($ex);
+
+
+        if(empty($ex))
+        {
+            echo "empty";
+        }
+        else 
+        {
+            foreach($ex as $value)
+            {
+                echo "&nbsp" . $value;
+            }
+        }
+    }
         // give the dj the abilty to see regualr Queue
         echo "<h3>Queue</h3>";
         $queue = $pdo->prepare("SELECT * from Queues order by Time");
         $queue->execute();
-        createTableRadio($queue);
+        
+        createTblRadio($queue);
         
         // give the dj the ability to see PriorityQueue
         echo "<h3>PriorityQueue</h3>";
-        echo "<form method = \"get\"";
         $Pqueue = $pdo->prepare("SELECT * from PriorityQueues order by Time");
         $Pqueue->execute();
-       echo "<table border = 1 cellspacing = 1>
-       <thead>
-         <tr>
-         <h1>
-           <th>CustID &nbsp;</th>
-           <th>SongID &nbsp;</th>
-           <th>Version &nbsp;</th>
-           <th>Time &nbsp;</th>
-           <th>&nbsp; Money &nbsp;</th>
-           </h1>
-         </tr>
-       </thead>
-       <tbody>";
-        while($row = $Pqueue -> fetch())
-        {
-            $id = $row['CustID'];
-            $Song = $row['SongID'];
-            $Version = $row['Version'];
-            $Time = $row['Time'];
-            $Money = $row['Money'];
-            echo "<h1><tr><td><input type='radio' name='Pqueue' value='$Song' '$id'>$id &nbsp</td><td>$Song &nbsp</td><td>$Version &nbsp </td><td>$Time &nbsp</td><td>$Money &nbsp </td></tr></h1>";
-        }
-        echo "</tbody></table>";
-
-        $queue2 = $pdo->prepare("SELECT * from Customers,PriorityQueues where Customers.CustID = PriorityQueues.CustID order by Time");
+        createTblRadio($Pqueue);
+        
+        // get first person from the queue and add it into where clause under
+        $queue2 = $pdo->prepare("SELECT Name,Time from Customers,PriorityQueues where Customers.CustID = PriorityQueues.CustID order by Time");
         $queue2->execute();
         $result = $queue2 -> fetch(PDO :: FETCH_ASSOC);
 
-        echo "<form method = \"post\"><button type = \"submit\" name = \"Delete\" value = \"clicked\">SING</button></form>";
-        if(isset($_GET['Pqueue'])&& $_GET['Delete'] === 'clicked')
-        {
-            echo "</br>";
-            echo "<h1>";
-            echo "Next to sing &nbsp" . $result['Name'];  
-            echo "</br>";
-            echo "</h1>";
-        }
+    
+        
         ?>
+            <input type = "submit" value = "Submit">
+        </form>
       
 
         <a href="startpage.html">
