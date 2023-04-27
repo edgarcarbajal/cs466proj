@@ -16,12 +16,12 @@
         <?php
             include "../php_files/PDOStartup.php";
 
-            $ddb1_id = "genre_dd";
-            $ddq1 = $pdo->prepare("SELECT DISTINCT Genre FROM Song");
-            $ddq1->execute();
+            $ddb1_id = "test";
+            $ddq1 = array("Artist", "Genre", "Version", "Year", "Duration");
+
             echo "<p>";
-            echo "<label for=\"$ddb1_id\">Choose a Genre to filter</label>";
-            createDropdown($ddq1, $ddb1_id);
+            echo "<label for=\"$ddb1_id\">Choose a section to filter</label>";
+            createDropdownNorm($ddq1, $ddb1_id);
 
             echo "</p><br><br>";
 
@@ -70,9 +70,6 @@
 
             createTableRadio($tblset, $current_key, $current_sort);
         ?>
-        </form>
-
-        <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/waitroom.php" method="GET">
             <input type="submit" value="Submit">
         </form>
 

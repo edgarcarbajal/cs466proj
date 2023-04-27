@@ -62,16 +62,19 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                     else
                         echo "<th><button id=\"$key\" name=\"$key\" value=\"ASC\" onclick=\"sortBy('$key')\">$key</button></th>"; 
                 }
+                echo "</form>";
                 echo "</tr>\n";
+                echo "<form action=\"https://students.cs.niu.edu/~z1895668/cs466proj/html_files/waitroom.php\" method=\"GET\">";
             }
             echo "<tr>\n";
             $j = 0;
             foreach($row as $key => $item) 
             {
+                $ver = $row["Version"];
                 if($j == 0)
                 {
                     echo "<td>";
-                    echo "<input type=\"radio\" id=\"song_$i\" name=\"selectsong\" value=\"$item\">";
+                    echo "<input type=\"radio\" id=\"song_$i\" name=\"selectsong\" value=\"$item,$ver\">";
                     echo "<label for=\"song_$i\">$item</label></td>";
                 }
                 else{ echo "<td>$item</td>"; }  
@@ -113,6 +116,19 @@ function createDropdown($result_set, $elem_name)
         }
     }
     else{ echo "<p>Dropdown not created - Failed to obtain a result set.</p>\n"; return false; }
+ 
+    return true;
+}
+
+function createDropdownNorm($arr, $elem_name)
+{
+    echo "<select id=\"$elem_name\" name=\"$elem_name\">\n";
+ 
+    for($i = 0; $i < sizeof($arr); $i++)
+    {
+        $str = $arr[$i];
+        echo "<option value=\"$str\">$str</option>";
+    }
  
     return true;
 }
