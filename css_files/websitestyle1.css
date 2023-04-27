@@ -4,6 +4,10 @@ body
     color: white;
 }
 
+#photo
+{
+    text-align: center;
+}
 
 table
 {
