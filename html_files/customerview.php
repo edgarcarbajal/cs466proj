@@ -5,6 +5,7 @@
         <title>CSCI 466 Project - Karaoke Website: Customer Page</title>
     </head>
 
+
     <body>
         <h1>Pick a Song!</h1>
 
@@ -15,9 +16,14 @@
         <form id="songdisplay" action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php" method="GET">
         <?php
             include "../php_files/PDOStartup.php";
+            include "../php_files/utilities.php";
 
-            $ddb1_id = "test";
-            $ddq1 = array("Artist", "Genre", "Version", "Year", "Duration");
+            #save session var info for this form(filtering/ordering form)
+            $get_varnames = array("custidtf","dd_filter", "filtertxt", "SongID", "Title", "Artist", "Genre", "Version", "Year", "Duration");
+            savesession_GET($get_varnames);
+
+            $ddb1_id = "dd_filter";
+            $ddq1 = array("Title", "Artist", "Genre", "Version", "Year", "Duration", "Contributor");
 
             echo "<p>";
             echo "<label for=\"$ddb1_id\">Choose a section to filter</label>";
@@ -25,14 +31,46 @@
 
             echo "</p><br><br>";
 
+            echo "<input type =\"text\" id=\"filtertxt\" name=\"filtertxt\">";
+
             echo "<input type=\"submit\" value=\"Filter Search\">";
 
-            echo "<br><br>";    
+            echo "<br><br>";
+            
 
+            #main query to build search table
+            $q = "SELECT Song.SongID, Title, Contributor.Name Artist, Genre, Song.Version, Year, Duration FROM Song, Contributor, Contributes WHERE ";
 
-            $q = "SELECT Song.SongID, Title, Contributor.Name Artist, Genre, Song.Version, Year, Duration FROM Song, Contributor, Contributes ";
-            $q = $q . "WHERE Song.SongID = Contributes.SongID AND Contributor.ContribID = Contributes.ContribID AND Role = 'Artist' ORDER BY ";
+            $qdefault = "Song.SongID = Contributes.SongID AND Contributor.ContribID = Contributes.ContribID AND Role = 'Artist' ";
+            $qextra = "Song.SongID IN(SELECT SongID FROM Contributes WHERE ContribID IN(SELECT ContribID FROM Contributor WHERE Name LIKE ?)) AND ";
+            $qsuffix = "ORDER BY ";
 
+            #parts to append if meet requirements set by dropdown
+            $qtitle = $qart = $qdefault . "AND Title LIKE ? " . $qsuffix;
+            $qart = $qdefault . "AND Contributor.Name LIKE ? " . $qsuffix;
+            $qgen = $qdefault . "AND Genre LIKE ? " . $qsuffix;
+            $qver = $qdefault . "AND Song.Version LIKE ? " . $qsuffix;
+            $qyear = $qdefault . "AND Year LIKE ? " . $qsuffix;
+            $qdur = $qdefault . "AND Duration LIKE ? " . $qsuffix;
+
+            #determine which query is run when loading in search table
+            $do_filter = false;
+            $q_arg = "";
+            if(empty($_GET["filtertxt"])) { $q = $q . $qdefault . $qsuffix; }
+            else
+            {
+                $q_arg = $_GET["filtertxt"];    
+
+                if($_GET["dd_filter"] == "Title") { $q = $q . $qtitle; $do_filter = true; }
+                elseif($_GET["dd_filter"] == "Artist") { $q = $q . $qart; $do_filter = true; }
+                elseif($_GET["dd_filter"] == "Genre") { $q = $q . $qgen; $do_filter = true; }
+                elseif($_GET["dd_filter"] == "Version") { $q = $q . $qver; $do_filter = true; }
+                elseif($_GET["dd_filter"] == "Year") { $q = $q . $qyear; $do_filter = true; }
+                elseif($_GET["dd_filter"] == "Duration") { $q = $q . $qdur; $do_filter = true; }
+                elseif($_GET["dd_filter"] == "Contributor") { $q = $q . $qextra . $qdefault . $qsuffix; $do_filter = true; }
+            }
+
+            #get the current column that the table is being ordered by
             $sort_str = "";
             $headerarr = array("SongID", "Title", "Artist", "Genre", "Version", "Year", "Duration");
 
@@ -53,7 +91,10 @@
                 $current_sort = "ASC";
 
                 $tblset = $pdo->prepare($q);
-                $tblset->execute(); 
+
+                #filter results if selected a category and given a non-empty string!
+                if($do_filter) { $tblset->execute(array("%$q_arg%")); }
+                else { $tblset->execute(); }
             }
             else 
             { 
@@ -65,7 +106,10 @@
                 $current_sort = $_GET[$sort_str];
 
                 $tblset = $pdo->prepare($q);
-                $tblset->execute(); 
+                
+                #filter results if selected a category and given a non-empty string!    
+                if($do_filter) { $tblset->execute(array("%$q_arg%")); }
+                else { $tblset->execute(); }
             }
 
             createTableRadio($tblset, $current_key, $current_sort);
