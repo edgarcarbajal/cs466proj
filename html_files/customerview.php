@@ -19,7 +19,8 @@
             include "../php_files/utilities.php";
 
             #save session var info for this form(filtering/ordering form)
-            $get_varnames = array("custidtf","dd_filter", "filtertxt", "SongID", "Title", "Artist", "Genre", "Version", "Year", "Duration");
+            $get_varnames = array("custidtf","dd_filter", "filtertxt");
+            // "SongID", "Title", "Artist", "Genre", "Version", "Year", "Duration" <- adding these makes the sort not work anymore...
             savesession_GET($get_varnames);
 
             $ddb1_id = "dd_filter";
