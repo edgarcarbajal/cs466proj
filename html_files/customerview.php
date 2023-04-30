@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <title>CSCI 466 Project - Karaoke Website: Customer Page</title>
     </head>
 
@@ -22,6 +23,27 @@
             $get_varnames = array("custidtf","dd_filter", "filtertxt");
             // "SongID", "Title", "Artist", "Genre", "Version", "Year", "Duration" <- adding these makes the sort not work anymore...
             savesession_GET($get_varnames);
+
+
+            #Check for valid ID in order to properly queue
+            $id_field = $_GET["custidtf"];
+            $id_q = "SELECT CustID FROM Customers WHERE CustID = ?";
+            $id_res = $pdo->prepare($id_q);
+            $id_res->execute(array($id_field));
+
+        if(!isset($id_field) || empty($id_field) || isEmptySetSQL($id_res))
+        {
+            echo "<div class=\"w3-card w3-red\"> <h1>Invalid Customer ID</h1> <br> <p>ID entered: \"$id_field\"</p> </div>\n";
+            echo "<p>Please return to the Sign In page and insert a valid Customer ID.</p>";
+        }
+        else
+        {
+            $id_q = "SELECT Name FROM Customers WHERE CustID = ?";
+            $id_res = $pdo->prepare($id_q);
+            $id_res->execute(array($id_field));
+            $cust_name = $id_res->fetchColumn();
+
+            echo "<h2>Welcome $cust_name, to the Karaoke Service!</h2>\n\n";
 
             $ddb1_id = "dd_filter";
             $ddq1 = array("Title", "Artist", "Genre", "Version", "Year", "Duration", "Contributor");
@@ -114,12 +136,22 @@
             }
 
             createTableRadio($tblset, $current_key, $current_sort);
+
+            #do this again for second form before submission!
+            $get_varnames = array("custidtf","dd_filter", "filtertxt");
+            savesession_GET($get_varnames);
+            
+            echo "<input type=\"submit\" value=\"Submit\">\n</form>";
+
+        }
         ?>
-            <input type="submit" value="Submit">
-        </form>
 
         <a href="startpage.html">
-            <input type="button" value="Go Back">
+            <input type="button" value="Go Back to home page">
+        </a>
+
+        <a href="customer_signin.php">
+            <input type="button" value="Go Back to Sign In">
         </a>
 
 

@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <title>CSCI 466 Project - Karaoke Website: Customer Sign In</title>
     </head>
 

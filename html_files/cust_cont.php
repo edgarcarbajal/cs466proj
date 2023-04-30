@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <title>CSCI 466 Project - Karaoke Website: Customer Account Creation Status</title>
     </head>
 
@@ -47,12 +48,20 @@
                     $idstr = $getCustID->fetchColumn();
 
                     echo "<h2>Customer ID: " . $idstr ." </h2>";
+
+                    echo "<p>You can return to the previous page and enter your new Customer ID, or press the button below to sign in directly!</p>\n";
+
+                    echo "<form action=\"https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php\" method=\"GET\">\n";
+                    echo "<input type=\"hidden\" name=\"custidtf\" value=\"$idstr\">\n"; 
+                    echo "<input type=\"submit\" value=\"Sign In Directly\">\n";
+                    echo "</form>\n";
+    
                 }
                 
             ?>
 
         <a href="customer_signin.php">
-            <input type="button" value="Return to Sign In">
+            <input type="button" value="Return to Sign In/Sign Up page">
         </a>
     </body>
 </html>

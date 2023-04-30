@@ -1,8 +1,8 @@
 <?php
 # CSCI 466 Project - showTables.php
 #  
-# A function that creates a table in html tags from a result set given by PDO.
-# Returns a boolean to inform the caller whether an empty set was found or not.
+# Functions that creates a tables and other objects in html tags from a result set given by PDO.
+# These functions return booleans to inform the caller whether an empty set was found or not.
 # ===============================================
 function createTable($result_set)
 {
@@ -37,7 +37,7 @@ function createTable($result_set)
     return true;
 }
 
-
+# this should be used only for custview
 function createTableRadio($result_set, $curr_sortkey, $curr_sort)
 {
     if($result_set) 
@@ -64,7 +64,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                 }
                 echo "</form>";
                 echo "</tr>\n";
-                echo "<form action=\"https://students.cs.niu.edu/~z1895668/cs466proj/html_files/waitroom.php\" method=\"GET\">";
+                echo "<form action=\"https://students.cs.niu.edu/~z1895668/cs466proj/html_files/queuesong.php\" method=\"GET\">";
             }
             echo "<tr>\n";
             $j = 0;
@@ -95,7 +95,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
     return true;
 }
 
-
+#use this if grabbing single values from SQL queries
 function createDropdown($result_set, $elem_name)
 {
     if($result_set) 
@@ -120,6 +120,7 @@ function createDropdown($result_set, $elem_name)
     return true;
 }
 
+# this is used if not grabbing from SQL query
 function createDropdownNorm($arr, $elem_name)
 {
     echo "<select id=\"$elem_name\" name=\"$elem_name\">\n";
@@ -132,6 +133,8 @@ function createDropdownNorm($arr, $elem_name)
  
     return true;
 }
+
+
 function createTblRadio($result_set)
 {
     if($result_set) 

@@ -19,4 +19,22 @@
         }
         echo "\n\n";
     }
+
+
+function isEmptySetSQL($result_set)
+{
+    if($result_set) 
+    {
+        $i = 0;
+ 
+        while($row = $result_set->fetch())
+            $i++;
+
+        if($i == 0)
+            return true; 
+    }
+    else{ echo "<p>SQL/PDO Error - Failed to obtain a result set.</p>\n"; return true; }
+ 
+    return false;
+}
 ?>
