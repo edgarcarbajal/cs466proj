@@ -19,9 +19,8 @@
             include "../php_files/PDOStartup.php";
             include "../php_files/utilities.php";
 
-            #save session var info for this form(filtering/ordering form)
-            $get_varnames = array("custidtf","dd_filter", "filtertxt");
-            // "SongID", "Title", "Artist", "Genre", "Version", "Year", "Duration" <- adding these makes the sort not work anymore...
+            #save session var info for this form(customer id needs to be saved).
+            $get_varnames = array("custidtf");
             savesession_GET($get_varnames);
 
 
@@ -107,7 +106,7 @@
             $current_sort = "ASC";
             if(empty($sort_str)) 
             { 
-                echo "<h3>Sorted by: SongID, ascending.</h3>";
+                echo "<h3>Sorted by: SongID, ASC.</h3>";
                 $q = $q . "SongID ASC";
 
                 $current_key = "SongID";
@@ -159,13 +158,32 @@
             function sortBy(item_id) 
             { 
                 console.log(item_id);
+
+                //get values before they are cleared by reset()
                 var current_value = document.getElementById(item_id).value;
+
+                //get the GET values from url, to keep the same sorting when resetting the form to apply the new sort
+                const urlParams = new URL(window.location.toLocaleString());
+                var filterval = urlParams.searchParams.get("dd_filter");
+                var searchval = urlParams.searchParams.get("filtertxt");
+
+                console.log(filterval);
+                console.log(searchval);
+
                 document.getElementById("songdisplay").reset();
 
                 if(current_value == "ASC") 
                     document.getElementById(item_id).value = "DESC";
                 else
                     document.getElementById(item_id).value = "ASC";
+                
+
+                //restore any filtered search values if any
+                if(filterval != "")
+                    document.getElementById("dd_filter").value = filterval;
+                if(searchval != "")
+                    document.getElementById("filtertxt").value = searchval;
+                
 
                 document.getElementById("songdisplay").submit();
             }

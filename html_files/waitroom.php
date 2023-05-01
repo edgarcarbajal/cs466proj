@@ -29,13 +29,15 @@
             $date = date('Y-m-d H:i:s');
             $args = array($_GET["custidtf"], $karaoke_file[0], $karaoke_file[1], $date);
 
-            # insert only if we have not refreshed the page!
-            if($qType == "reg")
+            # insert only if we have not refreshed the page! \/ from stackoverflow (does not work in firefox? or if cookies turned off??)
+            $is_page_refreshed = (isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] == 'max-age=0');
+
+            if($qType == "reg" && !$is_page_refreshed)
             {
                 $qin_res = $pdo->prepare($qin_reg); 
                 $qin_res->execute($args);
             }
-            elseif($qType == "pry")
+            elseif($qType == "pry" && !$is_page_refreshed)
             {
                 array_push($args, $_GET["moneytf"]);
                 $qin_res = $pdo->prepare($qin_pry); 
@@ -70,5 +72,6 @@
         <a href="startpage.html">
             <input type="button" value="Go Back to Start Page">
         </a>
+
     </body>
 </html>
