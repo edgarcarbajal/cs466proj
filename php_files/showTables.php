@@ -74,7 +74,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                 if($j == 0)
                 {
                     echo "<td>";
-                    echo "<input type=\"radio\" id=\"song_$i\" name=\"selectsong\" value=\"$item,$ver\">";
+                    echo "<input type=\"radio\" id=\"song_$i\" name=\"selectsong\" value=\"$item,$ver\" required>";
                     echo "<label for=\"song_$i\">$item</label></td>";
                 }
                 else{ echo "<td>$item</td>"; }  

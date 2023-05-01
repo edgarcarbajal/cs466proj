@@ -19,7 +19,7 @@
             <h2>Sign in using Customer ID</h2>
             <p>
                 <label for="custid">Customer ID:</label><br>
-                <input type="text" id="custid" name="custidtf"><br>
+                <input type="text" id="custid" name="custidtf" required><br>
             </p>
             <input type="submit" value="Sign In">
         
@@ -31,13 +31,13 @@
             <h2>Create Customer ID</h2>
             <p>
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="nametf"><br>
+                <input type="text" id="name" name="nametf" required><br>
 
                 <label for="email">Email:</label><br>
-                <input type="text" id="email" name="emailtf"><br>
+                <input type="text" id="email" name="emailtf" required><br>
 
                 <label for="phone">Phone Number (no dashes):</label><br>
-                <input type="text" id="phone" name="phonetf"><br>
+                <input type="text" id="phone" name="phonetf" required><br>
             </p>
             <input type="submit" value="Create ID">
 
