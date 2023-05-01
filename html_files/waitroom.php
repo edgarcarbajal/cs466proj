@@ -19,9 +19,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="djview.php">DJ Interface</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="customer_signin.php">Login Page</a>
-                </li>
               </ul>
             </div>
         </nav>
@@ -90,7 +87,8 @@
         <a href="startpage.html">
             <input type="button" value="Go Back to Start Page">
         </a>
-<<<<<<< HEAD
+
+
         <footer class="text-center text-lg-start bg-dark">
             <div class="container d-flex justify-content-center py-5">
             </div>
@@ -100,9 +98,6 @@
               © 2023 Created by: Edgar, Yonas, Mohamed
             </div>
             <!-- Copyright -->
-          </footer>
-=======
-
->>>>>>> 5e149219eb3a4198951ba8d89b37eef0415280bc
+        </footer>
     </body>
 </html>

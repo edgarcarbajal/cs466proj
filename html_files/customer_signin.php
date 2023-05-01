@@ -19,9 +19,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="djview.php">DJ Interface</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="customer_signin.php">Login Page</a>
-                </li>
               </ul>
             </div>
         </nav>
@@ -32,7 +29,7 @@
             If you do not have a Customer ID, you can create one below.
         </p>
 
-        <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php" method="GET">
+        <form action="customerview.php" method="GET">
 
             <h2>Sign in using Customer ID</h2>
             <p>
@@ -45,7 +42,7 @@
 
             <br><br>
         
-        <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/cust_cont.php" method="GET">
+        <form action="cust_cont.php" method="GET">
             <h2>Create Customer ID</h2>
             <p>
                 <label for="name">Name:</label><br>

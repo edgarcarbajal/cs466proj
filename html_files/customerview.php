@@ -32,7 +32,7 @@
             Choose a song to queue by writing the SongID below.
         </p>
     
-        <form id="songdisplay" action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php" method="GET">
+        <form id="songdisplay" action="customerview.php" method="GET">
         <?php
             include "../php_files/PDOStartup.php";
             include "../php_files/utilities.php";

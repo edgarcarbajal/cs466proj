@@ -8,7 +8,7 @@ function createTable($result_set)
 {
     if($result_set) 
     {
-        echo "<table border=1 cellspacing=1>\n";
+        echo "<table class=\"table table-bordered\">\n";
         $i = 0;
  
         while($row = $result_set->fetch(PDO::FETCH_ASSOC))
@@ -42,7 +42,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
 {
     if($result_set) 
     {
-        echo "<table border=1 cellspacing=1>\n";
+        echo "<table class=\"table table-bordered\">\n";
         $i = 0;
  
         while($row = $result_set->fetch(PDO::FETCH_ASSOC))
@@ -135,11 +135,11 @@ function createDropdownNorm($arr, $elem_name)
 }
 
 
-function createTblRadio($result_set)
+function createTableRadioDJ($result_set, $queuetype)
 {
     if($result_set) 
     {
-        echo "<table border=1 cellspacing=1>\n";
+        echo "<table class=\"table table-bordered\">\n";    
         $i = 0;
 
         while($row = $result_set->fetch(PDO::FETCH_ASSOC))
@@ -155,12 +155,12 @@ function createTblRadio($result_set)
             $j = 0;
             foreach($row as $key => $item) 
             {
-                if($j == 0)
+                if($j == 0) #first row is song id
                 {
-                   $ver = $row['Version'];
-                   $sngid = $row['SongID'];
+                    $ver = $row['Version'];
+                    $cid = $row['CustID'];
                     echo "<td>"; 
-                    echo "<input type=\"radio\" id=\"song_$i\" name=\"PQUEUE\" value=\"$item,$ver,$sngid\">";
+                    echo "<input type=\"radio\" id=\"song_$i\" name=\"selectqueue\" value=\"$queuetype,$item,$ver,$cid\">";
                     echo "<label for=\"song_$i\">$item</label></td>";
                 }
                 else{ echo "<td>$item</td>"; }  

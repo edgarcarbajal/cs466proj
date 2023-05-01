@@ -19,9 +19,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="djview.php">DJ Interface</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="customer_signin.php">Login Page</a>
-                </li>
               </ul>
             </div>
         </nav>

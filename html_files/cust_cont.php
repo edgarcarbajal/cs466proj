@@ -19,9 +19,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="djview.php">DJ Interface</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="customer_signin.php">Login Page</a>
-                </li>
               </ul>
             </div>
         </nav>
@@ -68,7 +65,7 @@
 
                     echo "<p>You can return to the previous page and enter your new Customer ID, or press the button below to sign in directly!</p>\n";
 
-                    echo "<form action=\"https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php\" method=\"GET\">\n";
+                    echo "<form action=\"customerview.php\" method=\"GET\">\n";
                     echo "<input type=\"hidden\" name=\"custidtf\" value=\"$idstr\">\n"; 
                     echo "<input type=\"submit\" value=\"Sign In Directly\">\n";
                     echo "</form>\n";
