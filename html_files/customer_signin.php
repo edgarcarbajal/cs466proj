@@ -26,12 +26,14 @@
             </div>
         </nav>
 
-        <h1>Sign In, or create a new Customer ID</h1>
+        <div class="container align-items-center justify-content-center">
+            <h1 class="container align-items-center justify-content-center">Sign In, or create a new Customer ID</h1>
 
-        <p>
-            In order to select a song, you must first sign in by providing your Customer ID below.
-            If you do not have a Customer ID, you can create one below.
-        </p>
+            <p>
+                In order to select a song, you must first sign in by providing your Customer ID below.
+                If you do not have a Customer ID, you can create one below.
+            </p>
+        </div>
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
