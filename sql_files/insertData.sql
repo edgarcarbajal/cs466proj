@@ -50,7 +50,7 @@ VALUES
     ('Every Breath You Take', 'Pop', 1983, 'Single', '00:04:13'),
     ('Stereo Love', 'Meme', 2009, 'Duet', '00:04:12'),
     ('Baby I''m Yours', 'Meme', 2019, 'Single', '00:03:34'),
-    ('Bed Intruder Song', 'Meme', 2010, 'Single', '00:03:23'),
+    ('Baby', 'Pop', 2010, 'Duet', '00:03:35'),
     ('Perfect', 'Pop', 2017, 'Single', '00:04:24'),
     ('GANGNAM STYLE', 'Korean', 2012, 'Single', '00:03:43'),
     ('Despacito', 'Pop', 2017, 'Duet', '00:04:11'),
@@ -213,11 +213,11 @@ VALUES                  -- v for Bohemian Rhapsody
  -- vv for Ladies and Gentlemen We got him
     ('Breakbot'),  -- 106Artist
     ('Irfane'), -- 107Vocalist
- -- vv for Bed Intruder Song
-    ('The Gregory Brothers'), -- 108Artist
-    ('Antoine Dodson'), -- 109Vocalist
-    ('Kelly Dodson'), -- 110Vocalist
-    ('Michael Gregory'), -- 111Producer
+ -- vv for Baby
+    ('Justin Beiber'), -- 108Artist&vocalist
+    ('Ludacris'), -- 109Vocalist
+    ('Madame Buttons'), -- 110engineeir
+    ('The-Dream'), -- 111Producer
  -- vv for Perfect
     ('Benny Blanco'), -- 112Producer
     ('Will Hicks'), -- 113Producer
@@ -468,11 +468,12 @@ VALUES
    (106,22,'Single','Artist'),
    (107,22,'Single','Vocalist'),
 
-   -- Bed Intruder Song --
-   (108,23,'Single','Artist'),
-   (109,23,'Single','Vocalist'),
-   (110,23,'Single','Vocalist'),
-   (111,23,'Single','Producer'),
+   -- Baby --
+   (108,23,'Duet','Artist'),
+   (108,23,'Duet','Vocalist'),
+   (109,23,'Duet','Vocalist'),
+   (110,23,'Duet','Engineer'),
+   (111,23,'Duet','Producer'),
 
    -- Perfect --
    (112,24,'Single','Producer'),
