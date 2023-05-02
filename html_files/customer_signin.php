@@ -56,8 +56,7 @@
                             <input type="text" id="custid" name="custidtf" required class="form-control form-control-lg" />
                             <label class="form-label" for="custid">Customer ID:</label>
                             </div>
-
-
+                            
                             <button class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In">Login</button>
                             </form>
                         </div>
