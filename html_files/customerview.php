@@ -7,7 +7,7 @@
     </head>
 
 
-    <body style="background-color: indigo;">
+    <body class="text-light" style="background-color: indigo;">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
             <div class="container-fluid">
               <ul class="navbar-nav">

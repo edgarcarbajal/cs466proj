@@ -7,7 +7,7 @@
         <title>CSCI 466 Project - Karaoke Website: Customer Waiting Room</title>
     </head>
 
-    <body onload="movebar()" style="background-color: indigo;">
+    <body onload="movebar()" style="background-color: indigo;" class="text-light">
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
             <div class="container-fluid">

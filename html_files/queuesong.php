@@ -7,7 +7,7 @@
         <title>CSCI 466 Project - Karaoke Website: Queue Song</title>
     </head>
 
-    <body style="background-color: indigo;">
+    <body style="background-color: indigo;" class="text-light">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
             <div class="container-fluid">
               <ul class="navbar-nav">

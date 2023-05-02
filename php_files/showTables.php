@@ -64,7 +64,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                 }
                 echo "</form>";
                 echo "</tr>\n";
-                echo "<form action=\"https://students.cs.niu.edu/~z1895668/cs466proj/html_files/queuesong.php\" method=\"GET\">";
+                echo "<form action=\"../html_files/queuesong.php\" method=\"GET\">";
             }
             echo "<tr>\n";
             $j = 0;
