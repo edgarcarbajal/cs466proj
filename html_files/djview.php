@@ -60,26 +60,45 @@
         $qresset->execute(array($args[1], $args[2], $args[3]));
 
         echo "<div class=\"w3-card w3-green\"> <h2>Current Song Playing Changed</h2> <br> <p>Successfully changed the currently playing song.</p> </div>\n";
+
+        //reset all strings of 'Current' column to DNE
+        $Songpickstr = "UPDATE Song SET Current = 'DNE'";
+        $qresset = $pdo->prepare($Songpickstr);
+        $qresset->execute();
+
+        //set the song selected to have a string value that contains the CustID (since all aother strings are DNE, just use NOT to find!)
+        $temp = $args[3];
+        $Songpickstr = "UPDATE Song SET Current = $temp WHERE SongID = ? AND Version = ?";
+        $qresset = $pdo->prepare($Songpickstr);
+        $qresset->execute(array($args[1], $args[2]));
       }
 
-      //print current song!
-      if($candelete)
+      
+      //display current playing song
+      $qcurr = "SELECT Title, Song.SongID, Song.Version, Contributor.Name Artist, Year, Duration, Current FROM Song, Contributor, Contributes WHERE Current NOT IN(SELECT Current FROM Song WHERE Current = 'DNE') ";
+      $qc2 = "AND Song.SongID = Contributes.SongID AND Song.Version = Contributes.Version AND Contributor.ContribID = Contributes.ContribID AND Role = 'Artist'";
+      $qresset = $pdo->prepare($qcurr . $qc2);
+      $qresset->execute();
+
+      //should only return one row so use fetchall
+      if($row = $qresset->fetch(PDO::FETCH_ASSOC))
       {
-        $qcurr = "SELECT Title, Song.Version, Contributor.Name Artist, Year, Duration FROM Song, Contributor, Contributes ";
-        $qc2 = "WHERE Song.SongID = Contributes.SongID AND Song.Version = Contributes.Version AND Contributor.ContribID = Contributes.ContribID AND Role = 'Artist' ";
-        $qc3 = "AND Song.SongID = ? AND Song.Version = ?";
-
-        $qresset = $pdo->prepare($qcurr . $qc2 . $qc3);
-        $qresset->execute(array($args[3], $args[2]));
-
-        $row = $qresset->fetch(PDO::FETCH_ASSOC);
-
+        $sel_kfile = $row["SongID"];
+        $sel_kfile = array($sel_kfile, $row["Version"]);
         $item = $row["Title"];
         echo "<div class=\"w3-card w3-amber\">\n";
         echo "<h2>Now playing: $item</h2>";
 
-        $item = $row["Duration"];
-        echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+        //$item = $row["Duration"];
+        //echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+
+        $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
+        $resinfo = $pdo->prepare($q_info);
+        $resinfo->execute($sel_kfile);
+        $imagepath = $resinfo->fetchColumn();
+
+        echo "<img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"380\" height=\"380\">\n";
+
         echo "<div class=\"w3-light-grey\">";
         echo "<div id=\"songdurbar\" class=\"w3-container w3-cyan w3-center\" style=\"width:0%\">0%</div>";
         echo "</div>";
@@ -91,22 +110,22 @@
         $item = $row["Year"];
         echo "$item</p>\n";
 
+        $item = $row["Current"];
         $qcurr = "SELECT Name FROM Customers WHERE CustID = ?";
         $qresset = $pdo->prepare($qcurr);
-        $qresset->execute(array($args[3]));
+        $qresset->execute(array($item));
 
         $item = $qresset->fetchColumn();
         echo "<p><b>Selected By: </b>$item</p>\n";
 
-        echo "</div>";
-      }
-      else
-      {
-        echo "<div class=\"w3-card w3-amber\">\n";
-        echo "<h2>Now playing: N/A </h2>";
-        echo "</div>";
-      }
-
+      echo "</div>";
+    }
+    else
+    {
+      echo "<div class=\"w3-card w3-amber\">\n";
+      echo "<h2>Now playing: N/A </h2>";
+      echo "</div>";
+    }
 
       $qreg = "SELECT Queues.SongID, Queues.Version, Title, Contributor.Name Artist, Queues.CustID, Customers.Name Customer, Time FROM Queues, Song, Customers, Contributor, Contributes WHERE ";
       $qreg_e1 = "Queues.SongID = Song.SongID AND Queues.Version = Song.Version AND Queues.CustID = Customers.CustID AND Queues.SongID = Contributes.SongID AND Queues.Version = Contributes.Version ";

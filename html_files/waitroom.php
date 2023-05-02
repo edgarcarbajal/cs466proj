@@ -2,11 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <title>CSCI 466 Project - Karaoke Website: Customer Waiting Room</title>
     </head>
 
-    <body>
+    <body onload="movebar()">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
             <div class="container-fluid">
               <ul class="navbar-nav">
@@ -60,20 +61,74 @@
             }
 
 
-            echo "<h2>Current Playing Song:</h2>";
+        //display current playing song
+        $qcurr = "SELECT Title, Song.SongID, Song.Version, Contributor.Name Artist, Year, Duration, Current FROM Song, Contributor, Contributes WHERE Current NOT IN(SELECT Current FROM Song WHERE Current = 'DNE') ";
+        $qc2 = "AND Song.SongID = Contributes.SongID AND Song.Version = Contributes.Version AND Contributor.ContribID = Contributes.ContribID AND Role = 'Artist'";
+        $qresset = $pdo->prepare($qcurr . $qc2);
+        $qresset->execute();
+
+        //should only return one row so use fetchall
+        if($row = $qresset->fetch(PDO::FETCH_ASSOC))
+        {
+          $sel_kfile = $row["SongID"];
+          $sel_kfile = array($sel_kfile, $row["Version"]);
+          $item = $row["Title"];
+          echo "<div class=\"w3-card w3-amber\">\n";
+          echo "<h2>Now playing: $item</h2>";
+
+          //$item = $row["Duration"];
+          //echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+
+          $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
+          $resinfo = $pdo->prepare($q_info);
+          $resinfo->execute($sel_kfile);
+          $imagepath = $resinfo->fetchColumn();
+
+          echo "<img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"380\" height=\"380\">\n";
+
+          echo "<div class=\"w3-light-grey\">";
+          echo "<div id=\"songdurbar\" class=\"w3-container w3-cyan w3-center\" style=\"width:0%\">0%</div>";
+          echo "</div>";
+
+          $item = $row["Artist"];
+          echo "<p>By: $item | ";  
+          $item = $row["Version"];
+          echo "$item - ";
+          $item = $row["Year"];
+          echo "$item</p>\n";
+
+          $item = $row["Current"];
+          $qcurr = "SELECT Name FROM Customers WHERE CustID = ?";
+          $qresset = $pdo->prepare($qcurr);
+          $qresset->execute(array($item));
+
+          $item = $qresset->fetchColumn();
+          echo "<p><b>Selected By: </b>$item</p>\n";
+
+        echo "</div>";
+      }
+      else
+      {
+        echo "<div class=\"w3-card w3-amber\">\n";
+        echo "<h2>Now playing: N/A </h2>";
+        echo "</div>";
+      }
+
             echo "<br><br>\n\n";
 
             $q_reg = "SELECT Title, Song.Version, Name Customer FROM Song, Queues, Customers WHERE Song.SongID = Queues.SongID AND Song.Version = Queues.Version AND Customers.CustID = Queues.CustID ORDER BY Time";
             $q_pry = "SELECT Title, Song.Version, Name Customer, Money FROM Song, PriorityQueues, Customers WHERE Song.SongID = PriorityQueues.SongID AND Song.Version = PriorityQueues.Version AND Customers.CustID = PriorityQueues.CustID ORDER BY Time";
 
-            $queue_res = $pdo->prepare($q_reg);
-            $queue_res->execute();
-            echo "<h3>Regular Queue</h3>";
-            createTable($queue_res);
 
             $queue_res = $pdo->prepare($q_pry);
             $queue_res->execute();
-            echo "<br><h3>Priority Queue</h3>";
+            echo "<h3>Priority Queue</h3>";
+            createTable($queue_res);
+
+
+            $queue_res = $pdo->prepare($q_reg);
+            $queue_res->execute();
+            echo "<br><h3>Regular Queue</h3>";
             createTable($queue_res);
 
 
@@ -99,5 +154,24 @@
             </div>
             <!-- Copyright -->
         </footer>
+
+
+    <script>
+      //from w3schools example
+      function movebar() {
+        var elem = document.getElementById("songdurbar");   
+        var width = 0;
+        var id = setInterval(frame, 1000);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+          } else {
+            width++; 
+            elem.style.width = width + '%'; 
+            elem.innerHTML = width * 1  + '%';
+          }
+        }
+      }
+    </script>
     </body>
 </html>

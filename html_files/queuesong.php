@@ -2,7 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css_files/websitestyle1.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <title>CSCI 466 Project - Karaoke Website: Queue Song</title>
     </head>
 
@@ -71,7 +72,15 @@
             echo "<h2>Selected Song Info:</h2><div class=\"w3-container w3-card-4 w3-teal w3-bottombar\">";
             echo "<h3>$stitle</h3> <br>";
 
-            $q_info = "SELECT Name, Role FROM Contributor, Contributes WHERE Contributor.ContribID = Contributes.ContribID AND Contributes.SongID = ? AND Contributes.Version = ?";
+            $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
+            $resinfo = $pdo->prepare($q_info);
+            $resinfo->execute($karaoke_file);
+            $imagepath = $resinfo->fetchColumn();
+
+            echo "<img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"520\" height=\"520\"><br>\n";
+
+
+            $q_info = "SELECT Name Contributor, Role FROM Contributor, Contributes WHERE Contributor.ContribID = Contributes.ContribID AND Contributes.SongID = ? AND Contributes.Version = ?";
             $resinfo = $pdo->prepare($q_info);
             $resinfo->execute($karaoke_file);
 
