@@ -36,7 +36,7 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
-                        <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php" method="GET">
+                        <form action="customerview.php" method="GET">
                             <h3 class="mb-5">Sign in</h3>
     
                             <div class="form-outline mb-4">
@@ -55,7 +55,7 @@
                         <div class="card-body p-5 text-center">
 
                             <h3 class="mb-5">Register</h3>
-                            <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/cust_cont.php" method="GET">
+                            <form action="cust_cont.php" method="GET">
 
                             <div class="form-outline mb-4">
                             <input type="text" id="name" name="nametf" required class="form-control form-control-lg" />

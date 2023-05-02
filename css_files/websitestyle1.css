@@ -9,3 +9,7 @@ table
     color: black;  
 }
 
+.active
+{
+    color: rgb(255, 34, 148) !important;
+}

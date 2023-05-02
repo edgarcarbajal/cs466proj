@@ -6,8 +6,10 @@
     <title>CSCI 466 Project - Karaoke Website: DJ Page</title>
   </head>
 
-  <body onload="movebar()" style="background-color: indigo;">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
+  <body onload="movebar(
+    
+  )" style="background-color: indigo;" class="text-light">
+    <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark py-3">
       <div class="container-fluid"> 
         <ul class="navbar-nav">
             <li class="nav-item">
