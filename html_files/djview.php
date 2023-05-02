@@ -11,13 +11,13 @@
       <div class="container-fluid"> 
         <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="startpage.html">Home</a>
+              <a class="nav-link" href="startpage.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="customer_signin.php">Sing a Song</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="djview.php">DJ Interface</a>
+              <a class="nav-link active" href="djview.php">DJ Interface</a>
             </li>
         </ul>
       </div>
@@ -145,7 +145,7 @@
       else { echo "<p>Sorted by Time, ASC</p>\n"; $qresset = $pdo->prepare($qpry . $qpry_e1 . $qpry_e2 . $qorder); }
       
       $qresset->execute();
-
+    
       createTableRadioDJ($qresset, "pry");
 
       echo "<br>";
@@ -153,7 +153,7 @@
       echo "<h2>Regular Queue</h2>";
       $qresset = $pdo->prepare($qreg . $qreg_e1 . $qreg_e2 . $qorder);
       $qresset->execute();
-
+      
       createTableRadioDJ($qresset, "reg");
       
     ?>

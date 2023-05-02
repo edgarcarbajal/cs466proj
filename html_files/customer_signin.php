@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../css_files/websitestyle1.css">
+    <link rel="stylesheet" href="../css_files/websitestyle1.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
         <title>CSCI 466 Project - Karaoke Website: Customer Sign In</title>
     </head>
 
-    <body>
+    <body style="background-color: indigo;">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
             <div class="container-fluid">
               <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-link active" href="startpage.html">Home</a>
+                  <a class="nav-link" href="startpage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="customer_signin.php">Sing a Song</a>
+                  <a class="nav-link active" href="customer_signin.php">Sing a Song</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="djview.php">DJ Interface</a>
@@ -23,7 +23,7 @@
             </div>
         </nav>
 
-        <div class="container align-items-center justify-content-center">
+        <div class="container align-items-center justify-content-center text-light">
             <h1 class="container align-items-center justify-content-center">Sign In, or create a new Customer ID</h1>
 
                <p>
@@ -43,7 +43,7 @@
                             <input type="text" id="custid" name="custidtf" required class="form-control form-control-lg" />
                             <label class="form-label" for="custid">Customer ID:</label>
                             </div>
-                            
+
                             <button class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In">Login</button>
                             </form>
                         </div>
