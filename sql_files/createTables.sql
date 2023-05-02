@@ -13,6 +13,8 @@ create table Song(
     Year INT NOT NULL,
     Version VARCHAR(16) NOT NULL,
     Duration TIME NOT NULL,
+    Imagepath VARCHAR(20),
+    Current VARCHAR(10) DEFAULT 'DNE',
     PRIMARY KEY (SongID,Version)
 );
 
@@ -29,7 +31,6 @@ CREATE TABLE Queues(
     SongID INT NOT NULL,
     Version VARCHAR(16) NOT NULL,
     Time DATETIME NOT NULL,
-    CURRENT BOOLEAN DEFAULT 0 NOT NULL,
 
     PRIMARY KEY(CustID, SongID, Version),
     FOREIGN KEY(CustID) REFERENCES Customers(CustID),
@@ -44,7 +45,6 @@ CREATE TABLE PriorityQueues(
     Version VARCHAR(16) NOT NULL,
     Time DATETIME NOT NULL,
     Money DECIMAL(6,2) NOT NULL,
-    CURRENT BOOLEAN DEFAULT 0 NOT NULL,
 
 
     PRIMARY KEY(CustID, SongID, Version),
@@ -60,7 +60,7 @@ CREATE TABLE Contributes(
     Version VARCHAR(16) NOT NULL,
     Role VARCHAR(20) NOT NULL,
 
-PRIMARY KEY(ContribID, SongID, Version, Role),
-FOREIGN KEY(ContribID) REFERENCES Contributor(ContribID),
-FOREIGN KEY (SongID, Version) REFERENCES Song(SongID, Version)
+    PRIMARY KEY(ContribID, SongID, Version, Role),
+    FOREIGN KEY(ContribID) REFERENCES Contributor(ContribID),
+    FOREIGN KEY (SongID, Version) REFERENCES Song(SongID, Version)
 );
