@@ -26,15 +26,10 @@
         <div class="container align-items-center justify-content-center">
             <h1 class="container align-items-center justify-content-center">Sign In, or create a new Customer ID</h1>
 
-            
-        <form action="customerview.php" method="GET">
-
-            <h2>Sign in using Customer ID</h2>
-
-            <p>
+               <p>
                 In order to select a song, you must first sign in by providing your Customer ID below.
                 If you do not have a Customer ID, you can create one below.
-            </p>
+                </p>
         </div>
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -43,21 +38,12 @@
                         <div class="card-body p-5 text-center">
                         <form action="https://students.cs.niu.edu/~z1895668/cs466proj/html_files/customerview.php" method="GET">
                             <h3 class="mb-5">Sign in</h3>
-
-            <br><br>
-        
-        <form action="cust_cont.php" method="GET">
-            <h2>Create Customer ID</h2>
-            <p>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="nametf" required><br>
-
+    
                             <div class="form-outline mb-4">
                             <input type="text" id="custid" name="custidtf" required class="form-control form-control-lg" />
                             <label class="form-label" for="custid">Customer ID:</label>
                             </div>
-
-
+                            
                             <button class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In">Login</button>
                             </form>
                         </div>

@@ -29,6 +29,7 @@ CREATE TABLE Queues(
     SongID INT NOT NULL,
     Version VARCHAR(16) NOT NULL,
     Time DATETIME NOT NULL,
+    CURRENT BOOLEAN DEFAULT 0 NOT NULL,
 
     PRIMARY KEY(CustID, SongID, Version),
     FOREIGN KEY(CustID) REFERENCES Customers(CustID),
@@ -43,6 +44,8 @@ CREATE TABLE PriorityQueues(
     Version VARCHAR(16) NOT NULL,
     Time DATETIME NOT NULL,
     Money DECIMAL(6,2) NOT NULL,
+    CURRENT BOOLEAN DEFAULT 0 NOT NULL,
+
 
     PRIMARY KEY(CustID, SongID, Version),
     FOREIGN KEY(CustID) REFERENCES Customers(CustID),
