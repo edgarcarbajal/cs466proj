@@ -1,3 +1,13 @@
+/*
+* CSCI 466 Project  - createTables.sql
+* -Edgar, Mohamed, Yonas
+*
+* A SQL File that inserts starter data into tables needed for the Karaoke website. The data inserted are random
+* data created by us project group members, and of ChatGPT. The code to insert the data however was
+* done exclusively by group members.
+*
+*/
+
 ALTER TABLE Customers AUTO_INCREMENT=1; -- Set the auto increment for each table start!
 
 INSERT INTO Customers (Email,Name,Phone)  
