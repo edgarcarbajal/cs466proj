@@ -72,41 +72,44 @@
         if($row = $qresset->fetch(PDO::FETCH_ASSOC))
         {
           $sel_kfile = $row["SongID"];
-          $sel_kfile = array($sel_kfile, $row["Version"]);
-          $item = $row["Title"];
-          echo "<div class=\"w3-card w3-amber\">\n";
-          echo "<h2>Now playing: $item</h2>";
+        $sel_kfile = array($sel_kfile, $row["Version"]);
+        $item = $row["Title"];
 
-          //$item = $row["Duration"];
-          //echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+        $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
+        $resinfo = $pdo->prepare($q_info);
+        $resinfo->execute($sel_kfile);
+        $imagepath = $resinfo->fetchColumn();
 
-          $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
-          $resinfo = $pdo->prepare($q_info);
-          $resinfo->execute($sel_kfile);
-          $imagepath = $resinfo->fetchColumn();
+        //$item = $row["Duration"];
+        //echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+        echo "<div class=\"bg-dark container card\"> 
+                <div class=\"row\">
+                  <div class=\"col-lg-4 mb-4\">
+                    <img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"380\" height=\"380\">
+                  </div>
+                  <div class=\"col-lg-6 mb-4\">
+                  <h2>Now playing: $item</h2>";
 
-          echo "<img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"380\" height=\"380\">\n";
-
-          echo "<div class=\"w3-light-grey\">";
-          echo "<div id=\"songdurbar\" class=\"w3-container w3-cyan w3-center\" style=\"width:0%\">0%</div>";
-          echo "</div>";
-
-          $item = $row["Artist"];
-          echo "<p>By: $item | ";  
-          $item = $row["Version"];
-          echo "$item - ";
-          $item = $row["Year"];
-          echo "$item</p>\n";
-
-          $item = $row["Current"];
-          $qcurr = "SELECT Name FROM Customers WHERE CustID = ?";
-          $qresset = $pdo->prepare($qcurr);
-          $qresset->execute(array($item));
-
-          $item = $qresset->fetchColumn();
-          echo "<p><b>Selected By: </b>$item</p>\n";
-
+        echo "<div class=\"w3-light-grey\">";
+        echo "<div id=\"songdurbar\" class=\"w3-container w3-cyan w3-center\" style=\"width:0%\">0%</div>";
         echo "</div>";
+
+        $item = $row["Artist"];
+        echo "<p>By: $item | ";  
+        $item = $row["Version"];
+        echo "$item - ";
+        $item = $row["Year"];
+        echo "$item</p>\n";
+
+        $item = $row["Current"];
+        $qcurr = "SELECT Name FROM Customers WHERE CustID = ?";
+        $qresset = $pdo->prepare($qcurr);
+        $qresset->execute(array($item));
+
+        $item = $qresset->fetchColumn();
+        echo "<p><b>Selected By: </b>$item</p>\n";
+
+      echo "\t\t</div></div>\n\t</div>\n";
       }
       else
       {

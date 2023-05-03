@@ -87,12 +87,6 @@
         $sel_kfile = array($sel_kfile, $row["Version"]);
         $item = $row["Title"];
 
-        #!!!!!!!!!!!!!!!!!!!!!!!!
-        #        echo "<div class=\"w3-card w3-amber\">\n";
-
-
-        
-
         $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
         $resinfo = $pdo->prepare($q_info);
         $resinfo->execute($sel_kfile);
@@ -108,7 +102,6 @@
                   <div class=\"col-lg-6 mb-4\">
                   <h2>Now playing: $item</h2>";
 
-        ########
         echo "<div class=\"w3-light-grey\">";
         echo "<div id=\"songdurbar\" class=\"w3-container w3-cyan w3-center\" style=\"width:0%\">0%</div>";
         echo "</div>";
@@ -128,7 +121,7 @@
         $item = $qresset->fetchColumn();
         echo "<p><b>Selected By: </b>$item</p>\n";
 
-      echo "\t\t</div></div>\n\t</div>\n</bold>";
+      echo "\t\t</div></div>\n\t</div>\n";
     }
     else
     {

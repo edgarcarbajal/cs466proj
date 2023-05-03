@@ -67,18 +67,20 @@
             $resinfo->execute($karaoke_file);
 
             $stitle = $resinfo->fetchColumn();
-
+                #########################################################
             #start of song info card:
-            echo "<h2>Selected Song Info:</h2><div class=\"w3-container w3-card-4 w3-teal w3-bottombar\">";
-            echo "<h3>$stitle</h3> <br>";
+            echo "<h2>Selected Song Info:</h2>
+            <div class=\"container-fluid card bg-dark \"><div class=\"row\">";
+            
 
             $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
             $resinfo = $pdo->prepare($q_info);
             $resinfo->execute($karaoke_file);
             $imagepath = $resinfo->fetchColumn();
 
-            echo "<img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"520\" height=\"520\"><br>\n";
+            echo "<div class=\"col-4\"><img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"520\" height=\"520\"><br>\n</div>";
 
+            echo "<div class=\"col\"><h3>Title: $stitle</h3>";
 
             $q_info = "SELECT Name Contributor, Role FROM Contributor, Contributes WHERE Contributor.ContribID = Contributes.ContribID AND Contributes.SongID = ? AND Contributes.Version = ?";
             $resinfo = $pdo->prepare($q_info);
@@ -86,9 +88,9 @@
 
             createTable($resinfo);
 
-            echo "<br></div>\n<br><br>\n";
+            echo "</div></div><br></div>\n<br><br>\n";
 
-
+                #####################################################################
             echo "<h2>Select Queue</h2>\n";
             echo "<p>You can select the queue that you prefer to wait in line for. There is the regular queue which is free, and the priority queue which costs money to line up in.</p>\n";
             echo "<p>The queues are sorted ascending so that the first row is the person who is first in line(although the DJ has the last decision).</p>\n";
