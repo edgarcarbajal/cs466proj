@@ -136,7 +136,7 @@
             createTable($queue_res);
 
 
-            echo "<br><p>If you'd like, you can queue up more songs by pressing the button below. Limit of 3 songs per Customer per queue. (i.e., 6 songs max)</p>";
+            echo "<br><p>If you'd like, you can queue up more songs by pressing the button below.</p>";
         ?>
             <input type="submit" value="Go back to Song Select">
         </form>

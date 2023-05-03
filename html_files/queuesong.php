@@ -78,7 +78,7 @@
             $resinfo->execute($karaoke_file);
             $imagepath = $resinfo->fetchColumn();
 
-            echo "<div class=\"col-4\"><img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"520\" height=\"520\"><br>\n</div>";
+            echo "<div class=\"col-5\"><img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"520\" height=\"520\"><br>\n</div>";
 
             echo "<div class=\"col\"><h3>Title: $stitle</h3>";
 
