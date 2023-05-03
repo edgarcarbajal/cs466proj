@@ -1,3 +1,11 @@
+<!--
+  CSCI 466 Project - customer_signin.php
+    -Edgar, Yonas, & Mohamed
+
+  This is a php file that is used to create a new Customer in the database and give the user credentials
+  to be able to select a song!
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +31,7 @@
             </div>
         </nav>
             <?php
-                include "../php_files/PDOStartup.php";
+                include "../util_files/PDOStartup.php";
 
                 $cre_built = true;
 

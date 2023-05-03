@@ -1,9 +1,12 @@
 <?php
 # CSCI 466 Project - showTables.php
+#   -Edgar, Mohamed, & Yonas
 #  
 # Functions that creates a tables and other objects in html tags from a result set given by PDO.
 # These functions return booleans to inform the caller whether an empty set was found or not.
 # ===============================================
+
+# creates regular table with no other functionality
 function createTable($result_set)
 {
     if($result_set) 
@@ -37,7 +40,7 @@ function createTable($result_set)
     return true;
 }
 
-# this should be used only for custview
+# this should be used only for custview - custview table
 function createTableRadio($result_set, $curr_sortkey, $curr_sort)
 {
     if($result_set) 
@@ -64,7 +67,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                 }
                 echo "</form>";
                 echo "</tr>\n";
-                echo "<form action=\"../html_files/queuesong.php\" method=\"GET\">";
+                echo "<form action=\"../webpage_files/queuesong.php\" method=\"GET\">";
             }
             echo "<tr>\n";
             $j = 0;
@@ -134,7 +137,7 @@ function createDropdownNorm($arr, $elem_name)
     return true;
 }
 
-
+# table for DJview
 function createTableRadioDJ($result_set, $queuetype)
 {
     if($result_set) 

@@ -1,3 +1,12 @@
+<!--
+  CSCI 466 Project - djview.php
+    -Edgar, Yonas, & Mohamed
+
+  This is a php file that is used to show the DJ view - to manage which songs are currently playing
+
+  some form tags might be printed when running createTable functions!
+-->
+
 <html>
   <head>
     <link rel="stylesheet" href="../css_files/websitestyle1.css">
@@ -35,8 +44,8 @@
 
     <?php
       
-      include "../php_files/PDOStartup.php";
-      include "../php_files/utilities.php";
+      include "../util_files/PDOStartup.php";
+      include "../util_files/utilities.php";
       
 
       # insert only if we have not refreshed the page! \/ from stackoverflow (does not work in firefox? or if cookies turned off??)
@@ -51,6 +60,7 @@
       $qreg_del = "DELETE FROM Queues WHERE SongID = ? AND Version = ? AND CustID = ?";
       $qpry_del = "DELETE FROM PriorityQueues WHERE SongID = ? AND Version = ? AND CustID = ?";
 
+      #remove from queue if selected - dont do it if page was refreshed
       $qresset = NULL;
       if($candelete && !$is_page_refreshed)
       {
@@ -211,7 +221,7 @@
         }
       }
 
-
+      //manage the sorting of the priority queues table!
       function sortPryBy()
       {
         //document.getElementById("sortform").submit();

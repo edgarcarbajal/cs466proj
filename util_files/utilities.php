@@ -1,4 +1,13 @@
 <?php
+# CSCI 466 Project - utilities.php
+#   -Edgar, Mohamed, & Yonas
+#
+# This php file provides some useful functions in php to check or do certain actions needed by
+# our project.
+#
+#####################################################################
+
+#this was heavily inspired by code found in stackoverflow
     function savesession_GET($sessionkeys)
     {
         #save GET variables into a hidden tag in order to save current session info(from stackoverflow)
@@ -20,7 +29,7 @@
         echo "\n\n";
     }
 
-
+# check if set is empty
 function isEmptySetSQL($result_set)
 {
     if($result_set) 

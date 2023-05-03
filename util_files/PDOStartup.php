@@ -1,11 +1,14 @@
 <?php
 # CSCI 466 Project - PDOStarup.php 
 #
+#   -Edgar, Yonas, & Mohamed
+#
 # File that startsup the PDO object. Always include this file in a new page.
 # E.g: When on a different html or php file in the website.
 #
 # *If you are running this php file in your own public_html directory, you must supply your own
 #  "MariaDB_secrets.php" file in order to login to the database, and use PDO.
+#  Place the secrets file in the same directory where the webpage files are located in!
 # =============================================================================
 
 

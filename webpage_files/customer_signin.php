@@ -1,3 +1,12 @@
+<!--
+  CSCI 466 Project - customer_signin.php
+    -Edgar, Yonas, & Mohamed
+
+  This is a php file that is used to obtain the credentials of the user(just a CustID primary key)
+  in order to be able to queue up songs later. If a user is needed to be created, there is a form here to
+  do that as well.
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -82,7 +91,7 @@
         </div>
         
         <?php
-            include "../php_files/PDOStartup.php";
+            include "../util_files/PDOStartup.php";
         
         
         ?>

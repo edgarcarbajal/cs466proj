@@ -1,3 +1,13 @@
+<!--
+  CSCI 466 Project - waitroom.php
+    -Edgar, Yonas, & Mohamed
+
+  This is a php file that is used to display simplified queues to the customer and a current song playing as they wait
+  for their song to be chosen by the DJ and be played.
+
+-->
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,8 +39,8 @@
         <form action="customerview.php" method="GET">
 
         <?php
-            include "../php_files/PDOStartup.php";
-            include "../php_files/utilities.php";
+            include "../util_files/PDOStartup.php";
+            include "../util_files/utilities.php";
             
             echo "<p>Thank You for using our Karaoke service! Please wait here until the DJ picks your song!</p>";
             echo "<p>For your convienience, the current queue ordering will be displayed, alongside the current playing song!</p>";

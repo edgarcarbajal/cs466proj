@@ -1,3 +1,12 @@
+<!--
+  CSCI 466 Project - queuesong.php
+    -Edgar, Yonas, & Mohamed
+
+  This is a php file that is used to see the extra contributor information of a selected song, and to
+  queue up a song!
+
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,8 +38,8 @@
         <form action="waitroom.php" method="GET">
 
         <?php
-            include "../php_files/PDOStartup.php";
-            include "../php_files/utilities.php";
+            include "../util_files/PDOStartup.php";
+            include "../util_files/utilities.php";
             
             #save session var info for this form(filtering/ordering form)
             $get_varnames = array("custidtf","selectsong");
@@ -67,7 +76,7 @@
             $resinfo->execute($karaoke_file);
 
             $stitle = $resinfo->fetchColumn();
-                #########################################################
+            #########################################################
             #start of song info card:
             echo "<h2>Selected Song Info:</h2>
             <div class=\"container-fluid card bg-dark \"><div class=\"row\">";
@@ -90,7 +99,7 @@
 
             echo "</div></div><br></div>\n<br><br>\n";
 
-                #####################################################################
+            #####################################################################
             echo "<h2>Select Queue</h2>\n";
             echo "<p>You can select the queue that you prefer to wait in line for. There is the regular queue which is free, and the priority queue which costs money to line up in.</p>\n";
             echo "<p>The queues are sorted ascending so that the first row is the person who is first in line(although the DJ has the last decision).</p>\n";

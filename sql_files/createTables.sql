@@ -1,3 +1,11 @@
+/*
+* CSCI 466 Project  - createTables.sql
+* -Edgar, Mohamed, Yonas
+*
+* A SQL File that creates the tables needed for the Karaoke website. This follows the specs given in the
+* PDF that shows how the ER-Diagram was converted to Relational Tables.
+*
+*/
 create table Customers(
     CustID INT NOT NULL AUTO_INCREMENT,
     Email VARCHAR(30) NOT NULL,

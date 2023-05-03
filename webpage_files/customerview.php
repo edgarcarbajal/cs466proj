@@ -1,3 +1,13 @@
+<!--
+  CSCI 466 Project - customer_signin.php
+    -Edgar, Yonas, & Mohamed
+
+  This is a php file that is used to select songs to view more in detail/queue up in a different page. Here
+  we can filter through songs as well.
+
+  Note some form tags are hidden/printed out when calling the createtable function!
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,8 +44,8 @@
     
         <form id="songdisplay" action="customerview.php" method="GET">
         <?php
-            include "../php_files/PDOStartup.php";
-            include "../php_files/utilities.php";
+            include "../util_files/PDOStartup.php";
+            include "../util_files/utilities.php";
 
             #save session var info for this form(customer id needs to be saved).
             $get_varnames = array("custidtf");
@@ -85,7 +95,7 @@
             $qextra = "Song.SongID IN(SELECT SongID FROM Contributes WHERE ContribID IN(SELECT ContribID FROM Contributor WHERE Name LIKE ?)) AND ";
             $qsuffix = "ORDER BY ";
 
-            #parts to append if meet requirements set by dropdown
+            #parts to append if meet requirements set by dropdown - this is used to filter table results
             $qtitle = $qart = $qdefault . "AND Title LIKE ? " . $qsuffix;
             $qart = $qdefault . "AND Contributor.Name LIKE ? " . $qsuffix;
             $qgen = $qdefault . "AND Genre LIKE ? " . $qsuffix;
@@ -127,7 +137,7 @@
                 echo "<h3>Sorted by: SongID, ASC.</h3>";
                 $q = $q . "SongID ASC";
 
-                $current_key = "SongID";
+                $current_key = "SongID"; //reset these to default
                 $current_sort = "ASC";
 
                 $tblset = $pdo->prepare($q);
@@ -169,6 +179,7 @@
 
 
         <script>
+            //javascript function used to reset the header buttons of the table accordingly when switching how to order the table
             function sortBy(item_id) 
             { 
                 console.log(item_id);
