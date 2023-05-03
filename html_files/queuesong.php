@@ -124,10 +124,6 @@
 
         </form>
 
-        <a href="startpage.html">
-            <input type="button" value="Go Back to Start Page">
-        </a>
-
 
         <form action="customerview.php" method="GET">
         <?php

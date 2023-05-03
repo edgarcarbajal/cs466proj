@@ -163,10 +163,6 @@
         }
         ?>
 
-        <a href="startpage.html">
-            <input type="button" value="Go Back to home page">
-        </a>
-
         <a href="customer_signin.php">
             <input type="button" value="Go Back to Sign In">
         </a>

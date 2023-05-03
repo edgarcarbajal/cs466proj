@@ -140,10 +140,6 @@
 
         <br><br>
 
-        <a href="startpage.html">
-            <input type="button" value="Go Back to Start Page">
-        </a>
-
 
         <footer class="text-center text-lg-start bg-dark">
             <div class="container d-flex justify-content-center py-5">

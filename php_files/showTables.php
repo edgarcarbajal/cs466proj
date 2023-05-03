@@ -58,9 +58,9 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                     else { $buttonlbl = $key . " \/ "; }
 
                     if($curr_sortkey == $key)
-                        echo "<th><button id=\"$key\" name=\"$key\" value=\"$curr_sort\" onclick=\"sortBy('$key')\">$buttonlbl</button></th>"; 
+                        echo "<th><button class=\"btn btn-secondary\" id=\"$key\" name=\"$key\" value=\"$curr_sort\" onclick=\"sortBy('$key')\">$buttonlbl</button></th>"; 
                     else
-                        echo "<th><button id=\"$key\" name=\"$key\" value=\"ASC\" onclick=\"sortBy('$key')\">$key</button></th>"; 
+                        echo "<th><button class=\"btn btn-secondary\" id=\"$key\" name=\"$key\" value=\"ASC\" onclick=\"sortBy('$key')\">$key</button></th>"; 
                 }
                 echo "</form>";
                 echo "</tr>\n";

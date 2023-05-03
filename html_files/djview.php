@@ -6,9 +6,7 @@
     <title>CSCI 466 Project - Karaoke Website: DJ Page</title>
   </head>
 
-  <body onload="movebar(
-    
-  )" style="background-color: indigo;" class="text-light">
+  <body onload="movebar()" style="background-color: indigo;" class="text-light">
     <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark py-3">
       <div class="container-fluid"> 
         <ul class="navbar-nav">
@@ -88,19 +86,29 @@
         $sel_kfile = $row["SongID"];
         $sel_kfile = array($sel_kfile, $row["Version"]);
         $item = $row["Title"];
-        echo "<div class=\"w3-card w3-amber\">\n";
-        echo "<h2>Now playing: $item</h2>";
 
-        //$item = $row["Duration"];
-        //echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+        #!!!!!!!!!!!!!!!!!!!!!!!!
+        #        echo "<div class=\"w3-card w3-amber\">\n";
+
+
+        
 
         $q_info = "SELECT Imagepath FROM Song WHERE SongID = ? AND Version = ?";
         $resinfo = $pdo->prepare($q_info);
         $resinfo->execute($sel_kfile);
         $imagepath = $resinfo->fetchColumn();
 
-        echo "<img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"380\" height=\"380\">\n";
+        //$item = $row["Duration"];
+        //echo "<input type=\"hidden\" id=\"totdur\" value=\"$item\">";
+        echo "<div class=\"bg-dark container card\"> 
+                <div class=\"row\">
+                  <div class=\"col-lg-4 mb-4\">
+                    <img class=\"img-responsive\" src=\"$imagepath\" alt=\"Song Art/Image\" width=\"380\" height=\"380\">
+                  </div>
+                  <div class=\"col-lg-6 mb-4\">
+                  <h2>Now playing: $item</h2>";
 
+        ########
         echo "<div class=\"w3-light-grey\">";
         echo "<div id=\"songdurbar\" class=\"w3-container w3-cyan w3-center\" style=\"width:0%\">0%</div>";
         echo "</div>";
@@ -120,7 +128,7 @@
         $item = $qresset->fetchColumn();
         echo "<p><b>Selected By: </b>$item</p>\n";
 
-      echo "</div>";
+      echo "\t\t</div></div>\n\t</div>\n</bold>";
     }
     else
     {
@@ -150,7 +158,7 @@
       savesession_GET($get_varnames);
 
       echo "<input type=\"hidden\" id=\"prysort\" name=\"prysort\" value=\"time\">";
-      echo "<button type=\"button\" id=\"buttonsort\" class=\"btn btn-primary\" onclick=\"sortPryBy()\">Switch Sorting</button>";
+      echo "<button type=\"button\" id=\"buttonsort\" class=\"btn btn-secondary\" onclick=\"sortPryBy()\">Switch Sorting</button>";
       echo "</form>";
       
       echo "<form action=\"djview.php\" method=\"GET\" id=\"form456\">";
@@ -182,10 +190,6 @@
       <input type="submit" value="Submit">
     </form>
       
-
-    <a href="startpage.html">
-      <input type="button" value="Go Back">
-    </a>
     <footer class="text-center text-lg-start bg-dark">
       <div class="container d-flex justify-content-center py-5"></div>
         
