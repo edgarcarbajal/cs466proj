@@ -1,0 +1,15 @@
+#photo
+{
+    text-align: left;
+}
+
+table
+{
+    background-color: rgb(246, 200, 109); 
+    color: black;  
+}
+
+.active
+{
+    color: rgb(255, 34, 148) !important;
+}
