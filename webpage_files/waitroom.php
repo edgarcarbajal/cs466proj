@@ -39,8 +39,8 @@
         <form action="customerview.php" method="GET">
 
         <?php
-            include "../php_files/PDOStartup.php";
-            include "../php_files/utilities.php";
+            include "../util_files/PDOStartup.php";
+            include "../util_files/utilities.php";
             
             echo "<p>Thank You for using our Karaoke service! Please wait here until the DJ picks your song!</p>";
             echo "<p>For your convienience, the current queue ordering will be displayed, alongside the current playing song!</p>";

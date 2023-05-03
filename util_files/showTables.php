@@ -67,7 +67,7 @@ function createTableRadio($result_set, $curr_sortkey, $curr_sort)
                 }
                 echo "</form>";
                 echo "</tr>\n";
-                echo "<form action=\"../html_files/queuesong.php\" method=\"GET\">";
+                echo "<form action=\"../webpage_files/queuesong.php\" method=\"GET\">";
             }
             echo "<tr>\n";
             $j = 0;

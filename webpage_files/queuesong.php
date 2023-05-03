@@ -38,8 +38,8 @@
         <form action="waitroom.php" method="GET">
 
         <?php
-            include "../php_files/PDOStartup.php";
-            include "../php_files/utilities.php";
+            include "../util_files/PDOStartup.php";
+            include "../util_files/utilities.php";
             
             #save session var info for this form(filtering/ordering form)
             $get_varnames = array("custidtf","selectsong");

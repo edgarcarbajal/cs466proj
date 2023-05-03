@@ -44,8 +44,8 @@
 
     <?php
       
-      include "../php_files/PDOStartup.php";
-      include "../php_files/utilities.php";
+      include "../util_files/PDOStartup.php";
+      include "../util_files/utilities.php";
       
 
       # insert only if we have not refreshed the page! \/ from stackoverflow (does not work in firefox? or if cookies turned off??)

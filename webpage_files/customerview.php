@@ -44,8 +44,8 @@
     
         <form id="songdisplay" action="customerview.php" method="GET">
         <?php
-            include "../php_files/PDOStartup.php";
-            include "../php_files/utilities.php";
+            include "../util_files/PDOStartup.php";
+            include "../util_files/utilities.php";
 
             #save session var info for this form(customer id needs to be saved).
             $get_varnames = array("custidtf");
